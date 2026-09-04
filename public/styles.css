@@ -2058,55 +2058,511 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
-  .header-container {
-    height: 70px;
+  body {
+    padding-bottom: 75px; /* Prevent floating dock from obscuring content */
   }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  /* 1. Top Notice Bar Mobile */
+  .top-notice-bar {
+    font-size: 0.78rem;
+    padding: 6px 0;
+  }
+
+  .top-notice-content {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .notice-left {
+    font-size: 0.74rem;
+  }
+
+  .notice-right {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+  }
+
+  .notice-right .notice-link:first-child {
+    display: none; /* Hide long Ganpati Tower text on small phone notice bar */
+  }
+
+  /* 2. Header & Mobile Menu */
+  .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .header-container {
+    height: 64px;
+    padding: 0 12px;
+  }
+
+  .brand-hitachi {
+    font-size: 1.35rem;
+    letter-spacing: 1px;
+  }
+
+  .brand-shop-label {
+    font-size: 0.65rem;
+  }
+
+  .dealer-name {
+    font-size: 0.78rem;
+  }
+
+  .dealer-loc {
+    display: none; /* Hide long location on mobile header */
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .header-track-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .header-cart-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .header-theme-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
   .nav-links {
     display: none;
     position: absolute;
-    top: 70px;
+    top: 64px;
     left: 0;
     right: 0;
-    background: #ffffff;
+    background: var(--bg-card);
+    color: var(--text-primary);
     flex-direction: column;
-    padding: 20px;
+    padding: 16px;
     border-bottom: 1px solid var(--border-light);
     box-shadow: var(--shadow-lg);
+    gap: 4px;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
   }
+
   .nav-links.open {
     display: flex;
   }
+
+  .nav-link {
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-light);
+    display: block;
+    width: 100%;
+  }
+
   .mobile-toggle {
     display: block;
   }
+
+  /* 3. Hero Section Mobile */
+  .hero-section {
+    padding: 34px 0 26px;
+  }
+
+  .hero-badge-pill {
+    font-size: 0.76rem;
+    padding: 5px 12px;
+    margin-bottom: 14px;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 1.85rem;
+    line-height: 1.22;
   }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 16px !important;
+  }
+
   .hero-stats-row {
-    grid-template-columns: 1fr;
-    gap: 14px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-top: 20px;
+    padding-top: 16px;
   }
+
+  .hero-stat-item {
+    padding: 10px 6px;
+  }
+
+  .hero-stat-item strong {
+    font-size: 1.05rem;
+  }
+
+  .hero-stat-item span {
+    font-size: 0.68rem;
+    line-height: 1.2;
+  }
+
+  /* Hero Simulator Mobile */
+  .hero-simulator-wrapper {
+    padding: 16px 12px;
+    border-radius: var(--radius-lg);
+  }
+
+  .ac-indoor-mockup {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 16px;
+  }
+
+  .ac-mockup-hitachi {
+    font-size: 0.8rem;
+  }
+
+  .ac-mockup-display {
+    font-size: 1.15rem;
+    padding: 2px 8px;
+  }
+
+  .sim-controls-grid {
+    padding: 10px 12px;
+    gap: 8px;
+    margin: 12px 0;
+  }
+
+  .temp-adjust-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+
+  .temp-readout-large {
+    font-size: 1.85rem;
+  }
+
+  .sim-modes-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .sim-mode-btn {
+    padding: 8px 6px;
+    font-size: 0.72rem;
+  }
+
+  .sim-metrics-bar {
+    gap: 8px;
+  }
+
+  .sim-metric-cell {
+    padding: 8px 10px;
+  }
+
+  .sim-metric-val {
+    font-size: 0.95rem;
+  }
+
+  /* 4. Trust Bar Mobile */
+  .trust-bar-section {
+    padding: 20px 0;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .trust-item {
+    padding: 12px 14px;
+  }
+
+  /* 5. 360 Tech Hotspot Mobile */
+  .section-tech-explorer {
+    padding: 44px 0;
+  }
+
+  .tech-explorer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 16px;
+  }
+
+  .tech-visual-diagram-card {
+    padding: 14px;
+  }
+
+  .tech-detail-panel {
+    padding: 20px 16px;
+  }
+
+  .tech-panel-title {
+    font-size: 1.35rem;
+  }
+
+  .tech-panel-desc {
+    font-size: 0.88rem;
+  }
+
+  .hotspot-pin {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+  /* 6. Sizing Calculator Mobile */
+  .calc-card-wrapper {
+    grid-template-columns: 1fr;
+    padding: 18px 14px;
+  }
+
   .calc-factors-grid {
     grid-template-columns: 1fr;
   }
-  .modal-prod-grid {
-    grid-template-columns: 1fr;
-    padding: 20px;
+
+  /* 7. Savings Estimator Mobile */
+  .savings-box {
+    padding: 18px 14px;
   }
-  .modal-actions-row {
-    flex-direction: column;
-  }
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
+
   .savings-inputs-row {
     grid-template-columns: 1fr;
   }
+
   .savings-compare-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
+
+  /* 8. EMI Budget Matcher Mobile */
+  .emi-matcher-card {
+    padding: 20px 14px;
+    margin: 20px 0;
+  }
+
+  .emi-matcher-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .emi-matcher-header h3 {
+    font-size: 1.35rem !important;
+  }
+
+  .emi-budget-readout {
+    font-size: 1.8rem;
+  }
+
+  .emi-matching-results-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* 9. Catalog Toolbar & Products Mobile */
+  .section {
+    padding: 44px 0;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+  }
+
+  .catalog-control-panel {
+    padding: 14px 12px;
+    margin-bottom: 20px;
+  }
+
+  .category-tabs-row {
+    gap: 6px;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+  }
+
+  .category-tabs-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cat-tab {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .secondary-filters-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .search-box-wrap {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .filter-dropdowns-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .filter-dropdowns-group button {
+    grid-column: 1 / -1;
+  }
+
+  .filter-chips-row {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+
+  .filter-chips-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-chip {
+    white-space: nowrap;
+    padding: 6px 13px;
+    font-size: 0.78rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .product-card {
+    padding: 14px;
+  }
+
+  .product-card-actions,
+  .product-card-actions-row2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  /* 10. Modals & Drawers Mobile */
+  .modal-prod-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .modal-actions-row {
+    flex-direction: column;
+  }
+
+  .modal-card,
+  .modal-card-lg {
+    width: 95%;
+    max-width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: 14px auto;
+  }
+
+  .cart-drawer {
+    width: 100%;
+    max-width: 100%;
+    right: -100%;
+  }
+
+  .cart-item {
+    grid-template-columns: 60px 1fr auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .cart-item-img {
+    width: 60px;
+    height: 55px;
+  }
+
+  .payment-methods-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
   .real-store-img {
-    height: 320px;
+    height: 240px;
+  }
+
+  /* 11. Floating Quick Action Dock Mobile */
+  .floating-dock-bar {
+    bottom: 12px;
+    right: 12px;
+    left: 12px;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .floating-action-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 11px 10px;
+    font-size: 0.82rem;
+  }
+}
+
+/* Extra Small Phones (< 400px) */
+@media (max-width: 400px) {
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .filter-dropdowns-group {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-hitachi {
+    font-size: 1.2rem;
+  }
+
+  .header-track-btn span {
+    display: none;
   }
 }
 
