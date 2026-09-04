@@ -459,13 +459,17 @@ const server = http.createServer(async (req, res) => {
   });
 });
 
-server.listen(PORT, () => {
-  const url = `http://localhost:${PORT}`;
-  console.log(`\n======================================================`);
-  console.log(`❄️ Hitachi Brand Shop - K.K. Enterprises Web Portal`);
-  console.log(`🔒 Security Hardened & Order APIs Enabled`);
-  console.log(`🚫 Admin routes: Completely Disabled (404/403)`);
-  console.log(`🌐 Running Live at: ${url}`);
-  console.log(`📦 Serving files from: ${PUBLIC_DIR}`);
-  console.log(`======================================================\n`);
-});
+if (require.main === module) {
+  server.listen(PORT, () => {
+    const url = `http://localhost:${PORT}`;
+    console.log(`\n======================================================`);
+    console.log(`❄️ Hitachi Brand Shop - K.K. Enterprises Web Portal`);
+    console.log(`🔒 Security Hardened & Order APIs Enabled`);
+    console.log(`🚫 Admin routes: Completely Disabled (404/403)`);
+    console.log(`🌐 Running Live at: ${url}`);
+    console.log(`📦 Serving files from: ${PUBLIC_DIR}`);
+    console.log(`======================================================\n`);
+  });
+}
+
+module.exports = server;
