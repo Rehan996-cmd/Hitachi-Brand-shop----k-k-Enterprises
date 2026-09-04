@@ -1913,44 +1913,6 @@ button, input, select, textarea {
   opacity: 1;
 }
 
-/* ==========================================================================
-   FLOATING ACTION BUTTONS
-   ========================================================================== */
-.floating-actions-bar {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 1020;
-}
-
-.fab-btn {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-lg);
-  cursor: pointer;
-  transition: transform var(--transition-fast);
-}
-
-.fab-btn:hover {
-  transform: scale(1.1);
-}
-
-.fab-wa {
-  background: #25d366;
-  color: #ffffff;
-}
-
-.fab-phone {
-  background: var(--hitachi-red);
-  color: #ffffff;
-}
 
 /* ==========================================================================
    FOOTER
@@ -2058,9 +2020,6 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
-  body {
-    padding-bottom: 75px; /* Prevent floating dock from obscuring content */
-  }
 
   .container {
     padding: 0 16px;
@@ -2529,21 +2488,6 @@ button, input, select, textarea {
     height: 240px;
   }
 
-  /* 11. Floating Quick Action Dock Mobile */
-  .floating-dock-bar {
-    bottom: 12px;
-    right: 12px;
-    left: 12px;
-    justify-content: space-between;
-    gap: 8px;
-  }
-
-  .floating-action-btn {
-    flex: 1;
-    justify-content: center;
-    padding: 11px 10px;
-    font-size: 0.82rem;
-  }
 }
 
 /* Extra Small Phones (< 400px) */
@@ -4088,45 +4032,5 @@ button, input, select, textarea {
   transform: translateY(-3px);
 }
 
-/* ==========================================================================
-   5. FLOATING QUICK ACTION DOCK (MOBILE & DESKTOP)
-   ========================================================================== */
-.floating-dock-bar {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 999;
-}
 
-.floating-action-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 18px;
-  border-radius: 99px;
-  font-weight: 700;
-  font-size: 0.9rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.floating-action-btn:hover {
-  transform: translateY(-3px) scale(1.04);
-}
-
-.floating-wa-btn {
-  background: #22c55e;
-  color: #ffffff;
-}
-
-.floating-call-btn {
-  background: #0f172a;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
 
