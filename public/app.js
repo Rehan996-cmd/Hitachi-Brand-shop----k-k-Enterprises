@@ -2313,7 +2313,12 @@ async function lookupOrderTracking(overrideId = "") {
 // 23. THEME ENGINE (DARK / LIGHT LUXURY THEME)
 // ==========================================================================
 function initTheme() {
-  const savedTheme = localStorage.getItem("hitachi_theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  let savedTheme = localStorage.getItem("hitachi_theme");
+  // Default to clean white light theme
+  if (!savedTheme || savedTheme === "dark") {
+    savedTheme = "light";
+    localStorage.setItem("hitachi_theme", "light");
+  }
   document.documentElement.setAttribute("data-theme", savedTheme);
   updateThemeIcon(savedTheme);
 }
@@ -2324,7 +2329,7 @@ function toggleTheme() {
   document.documentElement.setAttribute("data-theme", nextTheme);
   localStorage.setItem("hitachi_theme", nextTheme);
   updateThemeIcon(nextTheme);
-  showToast(nextTheme === "dark" ? "🌙 Obsidian Midnight Theme Activated" : "☀️ Arctic Daylight Theme Activated");
+  showToast(nextTheme === "dark" ? "🌙 Dark Theme Activated" : "☀️ Pure White Theme Activated");
 }
 
 function updateThemeIcon(theme) {
@@ -2521,28 +2526,28 @@ function updateEmiBudgetFilter(maxEmiVal) {
       <div class="emi-match-item">
         <div>
           <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
-            <span style="font-size: 0.75rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">
+            <span style="font-size: 0.75rem; background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-weight: 700;">
               ${p.tonnage} • ${p.starRating}★
             </span>
-            <span style="font-size: 0.72rem; color: #fbbf24; font-weight: 700;">0% Interest</span>
+            <span style="font-size: 0.72rem; color: #b45309; font-weight: 700;">0% Interest</span>
           </div>
-          <h4 style="font-size: 0.95rem; font-weight: 700; color: #ffffff; line-height: 1.4; margin-bottom: 8px;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: #0f172a; line-height: 1.4; margin-bottom: 8px;">
             ${p.name}
           </h4>
-          <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 12px;">
-            Showroom Offer Price: <strong style="color: #ffffff;">₹${p.price.toLocaleString("en-IN")}</strong>
+          <div style="font-size: 0.8rem; color: #64748b; margin-bottom: 12px;">
+            Showroom Offer Price: <strong style="color: #0f172a;">₹${p.price.toLocaleString("en-IN")}</strong>
           </div>
         </div>
 
-        <div style="padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+        <div style="padding-top: 10px; border-top: 1px solid #fed7aa;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
             <div>
-              <div style="font-size: 0.7rem; color: #94a3b8;">Starts from</div>
-              <div style="font-size: 1.1rem; font-weight: 800; color: #fbbf24; font-family: var(--font-display);">
-                ₹${emi18.toLocaleString("en-IN")}<span style="font-size: 0.75rem; color: #cbd5e1;">/mo</span>
+              <div style="font-size: 0.7rem; color: #64748b;">Starts from</div>
+              <div style="font-size: 1.1rem; font-weight: 800; color: #d97706; font-family: var(--font-display);">
+                ₹${emi18.toLocaleString("en-IN")}<span style="font-size: 0.75rem; color: #64748b;">/mo</span>
               </div>
             </div>
-            <div style="font-size: 0.75rem; color: #cbd5e1; text-align: right;">
+            <div style="font-size: 0.75rem; color: #64748b; text-align: right;">
               18 Mos No-Cost EMI
             </div>
           </div>
