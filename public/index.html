@@ -99,6 +99,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
           Track Order
         </button>
+        <button class="header-theme-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Switch Theme">🌙</button>
         <button class="header-cart-btn" id="openCartBtn" onclick="toggleCartDrawer()" title="View Shopping Cart">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
           Cart <span class="cart-badge" id="headerCartCount">0</span>
@@ -162,24 +163,77 @@
         </div>
       </div>
 
-      <!-- Hero Visual Showcase -->
+      <!-- Hero Visual Showcase: Interactive Japanese Cooling Simulator -->
       <div class="hero-visual-card">
-        <div class="storefront-preview-box">
-          <img src="assets/storefront.png" alt="Hitachi Brand Shop - K.K. Enterprises Storefront Sikar" class="storefront-img" />
-          <div class="storefront-tag">
-            <span>🏬</span> Official Hitachi Brand Shop Storefront • Sikar
+        <div class="hero-simulator-wrapper" id="acSimulator">
+          <div class="simulator-top-bar">
+            <div class="sim-brand-tag">
+              <span>❄️</span>
+              <span>airHome 6000 LIVE COOLING DEMO</span>
+            </div>
+            <div class="sim-power-indicator">
+              <span class="sim-power-dot"></span>
+              <span id="simPowerStatus">Chilling Live (52°C Ready)</span>
+            </div>
+          </div>
+
+          <!-- AC Unit Stage with Live Digital Display & Airflow -->
+          <div class="ac-visual-stage">
+            <div class="ac-indoor-mockup">
+              <div class="ac-mockup-top-seam"></div>
+              <div class="ac-mockup-body">
+                <span class="ac-mockup-hitachi">HITACHI</span>
+                <div class="ac-mockup-display" id="acDisplayTemp">18°C</div>
+              </div>
+              <div class="ac-louver-grille"></div>
+              <div class="cooling-airflow-animation" id="simAirflow">
+                <div class="airflow-ribbon"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls: - and + Temperature -->
+          <div class="sim-controls-grid">
+            <button class="temp-adjust-btn" onclick="adjustSimulatorTemp(-1)" title="Lower Temperature" aria-label="Decrease Temp">−</button>
+            <div class="temp-center-readout">
+              <div class="temp-readout-large" id="simTempBig">18°C</div>
+              <div class="temp-status-sub" id="simStatusSub">Arctic JetCool Active</div>
+            </div>
+            <button class="temp-adjust-btn" onclick="adjustSimulatorTemp(1)" title="Increase Temperature" aria-label="Increase Temp">+</button>
+          </div>
+
+          <!-- Preset Modes -->
+          <div class="sim-modes-row">
+            <button class="sim-mode-btn active" onclick="setSimulatorMode('jet', 16, this)">⚡ 16°C Jet</button>
+            <button class="sim-mode-btn" onclick="setSimulatorMode('eco', 24, this)">🌿 24°C Eco</button>
+            <button class="sim-mode-btn" onclick="setSimulatorMode('frost', 18, this)">❄️ FrostWash</button>
+            <button class="sim-mode-btn" onclick="setSimulatorMode('quiet', 22, this)">🌙 21dB Sleep</button>
+          </div>
+
+          <!-- Live Metrics & Savings -->
+          <div class="sim-metrics-bar">
+            <div class="sim-metric-cell">
+              <div class="sim-metric-title">Live Consumption</div>
+              <div class="sim-metric-val" id="simWattsVal">680 Watts</div>
+            </div>
+            <div class="sim-metric-cell energy">
+              <div class="sim-metric-title">Desert Energy Saved</div>
+              <div class="sim-metric-val" id="simSavingsVal">58% vs Non-Inv</div>
+            </div>
+          </div>
+
+          <!-- Direct 1-Click Order Link -->
+          <div style="margin-top: 14px; text-align: center;">
+            <button class="btn btn-primary" onclick="buyNow('airhome_600_5s')" style="width: 100%; padding: 12px; font-size: 0.95rem;">
+              ⚡ Own This airHome on 0% EMI: ₹2,694/mo
+            </button>
           </div>
         </div>
 
-        <div class="hero-ac-floating-card">
-          <img src="assets/split_ac_airhome.jpg" alt="Hitachi airHome Inverter AC" class="hero-ac-thumb" />
-          <div class="hero-ac-info">
-            <strong>airHome 400 Inverter Split AC</strong>
-            <span>1.5 Ton 5-Star • FrostWash • 100% Copper</span>
-          </div>
-          <div class="hero-ac-price">
-            <span class="p-amt">₹44,990</span>
-            <span class="p-badge">0% EMI Available</span>
+        <div class="storefront-preview-box" style="margin-top: 14px;">
+          <img src="assets/storefront.png" alt="Hitachi Brand Shop - K.K. Enterprises Storefront Sikar" class="storefront-img" />
+          <div class="storefront-tag">
+            <span>🏬</span> Official Hitachi Brand Shop Storefront • Ganpati Tower, Sikar
           </div>
         </div>
       </div>
@@ -215,6 +269,66 @@
         <div class="trust-content">
           <strong>Lifetime Service Support</strong>
           <p>Dedicated K.K. Enterprises customer care &amp; AMC plans</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4B. HITACHI 360° TECH HOTSPOT EXPLORER -->
+  <section class="section-tech-explorer" id="tech-explorer">
+    <div class="container">
+      <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+        <span class="section-eyebrow" style="color: #38bdf8;">Japanese Precision Engineering</span>
+        <h2 class="section-title" style="color: #ffffff;">Why Hitachi Beats Rajasthan's 52°C Desert Heat</h2>
+        <p class="section-desc" style="color: #94a3b8;">
+          Click the interactive pulsing hotspots below to explore the internal technology built inside every Hitachi airHome Inverter unit at K.K. Enterprises.
+        </p>
+      </div>
+
+      <div class="tech-explorer-grid">
+        <!-- Interactive Diagram with Hotspot Pins -->
+        <div class="tech-visual-diagram-card">
+          <img src="assets/split_ac_airhome.jpg" alt="Hitachi airHome Internal Engineering Diagram" class="tech-ac-main-img" />
+
+          <!-- Pulse Hotspot Pins -->
+          <button class="hotspot-pin pin-frostwash active" onclick="selectHotspot('frostwash', this)" title="FrostWash Auto-Clean">1</button>
+          <button class="hotspot-pin pin-compressor" onclick="selectHotspot('compressor', this)" title="52°C Tropical Inverter Compressor">2</button>
+          <button class="hotspot-pin pin-copper" onclick="selectHotspot('copper', this)" title="100% Inner Grooved Copper">3</button>
+          <button class="hotspot-pin pin-goldfin" onclick="selectHotspot('goldfin', this)" title="Dual Gold Fin Anti-Rust Barrier">4</button>
+          <button class="hotspot-pin pin-isee" onclick="selectHotspot('isee', this)" title="iSee Intelligent Sensor">5</button>
+        </div>
+
+        <!-- Hotspot Detail Explanation Card -->
+        <div class="tech-detail-panel" id="techDetailPanel">
+          <span class="tech-panel-badge" id="hotspotBadge">FEATURE #1: COIL HYGIENE</span>
+          <h3 class="tech-panel-title" id="hotspotTitle">FrostWash 3.0 Self-Cleaning Technology</h3>
+          <p class="tech-panel-desc" id="hotspotDesc">
+            In Rajasthan's dusty climate, dust builds up inside the cooling coils within weeks, reducing cooling by 40%. Hitachi's patented FrostWash freezes the heat exchanger to -15°C, trapping airborne dust and bacteria, then instantly melts the frost to wash it away cleanly into the drain.
+          </p>
+
+          <div class="tech-feature-checklist" id="hotspotChecklist">
+            <div class="tech-check-item">
+              <span class="tech-check-icon">✓</span>
+              <span>Eliminates 99.9% viruses, bacteria, and fine desert dust particles</span>
+            </div>
+            <div class="tech-check-item">
+              <span class="tech-check-icon">✓</span>
+              <span>Saves up to ₹3,500/year in routine chemical coil servicing costs</span>
+            </div>
+            <div class="tech-check-item">
+              <span class="tech-check-icon">✓</span>
+              <span>Maintains factory-fresh airflow velocity for 10+ years</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="#catalog" class="btn btn-primary" onclick="setCategory('split_ac')" style="padding: 10px 20px; font-size: 0.9rem;">
+              View FrostWash Models
+            </a>
+            <button class="btn btn-outline" onclick="openQuoteModal('airHome FrostWash AC')" style="border-color: rgba(255,255,255,0.3); color: #ffffff; padding: 10px 18px; font-size: 0.9rem;">
+              Get Best Deal
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -356,6 +470,41 @@
     </div>
   </section>
 
+  <!-- 5B. FIND AC BY MONTHLY EMI BUDGET -->
+  <section class="section" style="padding: 60px 0 20px;">
+    <div class="container">
+      <div class="emi-matcher-card">
+        <div class="emi-matcher-header">
+          <div>
+            <span class="section-eyebrow" style="color: #fbbf24;">Smart Affordability Matcher</span>
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin-top: 4px;">Find Your Hitachi AC By Monthly EMI Budget</h3>
+            <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 6px;">
+              Slide to your preferred monthly comfort budget — 0% interest EMI options available on-the-spot at K.K. Enterprises!
+            </p>
+          </div>
+          <div>
+            <div style="font-size: 0.8rem; color: #94a3b8; text-transform: uppercase;">Max Monthly Budget</div>
+            <div class="emi-budget-readout" id="emiBudgetReadout">₹3,000 / mo</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <input type="range" id="emiBudgetSlider" class="calc-slider" min="1500" max="6000" value="3000" step="250" oninput="updateEmiBudgetFilter(this.value)" />
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #94a3b8; margin-top: 6px;">
+            <span>₹1,500/mo (Entry Level)</span>
+            <span>₹3,000/mo (5-Star airHome)</span>
+            <span>₹6,000/mo (Heavy Commercial)</span>
+          </div>
+        </div>
+
+        <!-- Matched AC Cards Container -->
+        <div class="emi-matching-results-grid" id="emiMatchResultsGrid">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 6. PRODUCT CATALOG & FILTERS -->
   <section class="section" id="catalog">
     <div class="container">
@@ -407,6 +556,17 @@
 
             <span class="count-indicator" id="productCountBadge">Loading models...</span>
           </div>
+        </div>
+
+        <!-- Quick Filter Chips -->
+        <div class="filter-chips-row" style="margin-top: 14px;">
+          <button class="filter-chip active" onclick="applyQuickFilter('all', this)">All Models</button>
+          <button class="filter-chip" onclick="applyQuickFilter('5star', this)">⭐ 5-Star Highest Savings</button>
+          <button class="filter-chip" onclick="applyQuickFilter('1.5ton', this)">❄️ 1.5 Ton (Rajasthan Top Pick)</button>
+          <button class="filter-chip" onclick="applyQuickFilter('frostwash', this)">✨ FrostWash Self-Clean</button>
+          <button class="filter-chip" onclick="applyQuickFilter('copper', this)">🛡️ 100% Copper Condenser</button>
+          <button class="filter-chip" onclick="applyQuickFilter('budget35k', this)">💰 Under ₹35,000</button>
+          <button class="filter-chip" onclick="applyQuickFilter('window', this)">🪟 Window ACs</button>
         </div>
       </div>
 
@@ -1321,6 +1481,16 @@
       </div>
     </div>
   </div>
+
+  <!-- 23. FLOATING QUICK ACTION DOCK (MOBILE & DESKTOP) -->
+  <aside class="floating-dock-bar" aria-label="Quick Actions">
+    <a href="https://wa.me/919587111100?text=Hello%20Hitachi%20Brand%20Shop%20K.K.%20Enterprises%2C%20I%20want%20to%20inquire%20about%20AC%20offers%20and%20models." target="_blank" class="floating-action-btn floating-wa-btn" title="Chat on WhatsApp with Showroom">
+      <span>💬</span> WhatsApp Showroom
+    </a>
+    <a href="tel:+919587111100" class="floating-action-btn floating-call-btn" title="Call Showroom Hotline">
+      <span>📞</span> Call Showroom
+    </a>
+  </aside>
 
   <!-- Interactive Scripts -->
   <script src="app.js"></script>

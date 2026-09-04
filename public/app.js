@@ -751,6 +751,7 @@ const PRODUCTS_DATA = [
 let currentCategory = "all";
 let currentTonnageFilter = "all";
 let currentStarFilter = "all";
+let currentQuickFilter = "all";
 let searchQuery = "";
 let comparedProducts = []; // Max 3 items
 
@@ -764,7 +765,11 @@ let lastConfirmedOrder = null;
 
 // 3. Initialization
 document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
   renderProductCatalog();
+  initACSimulator();
+  initTechExplorer();
+  initEmiBudgetMatcher();
   initTonnageCalculator();
   initSavingsCalculator();
   initEventListeners();
@@ -807,7 +812,16 @@ function renderProductCatalog() {
                       p.condenser.toLowerCase().includes(q);
     }
 
-    return matchesCategory && matchesTonnage && matchesStar && matchesSearch;
+    // Quick chip filter
+    let matchesQuick = true;
+    if (currentQuickFilter === "5star") matchesQuick = p.starRating === 5;
+    else if (currentQuickFilter === "1.5ton") matchesQuick = p.tonnageVal === 1.5;
+    else if (currentQuickFilter === "frostwash") matchesQuick = (p.highlight && p.highlight.includes("FrostWash")) || (p.features && p.features.some(f => f.includes("FrostWash")));
+    else if (currentQuickFilter === "copper") matchesQuick = p.condenser && p.condenser.includes("Copper");
+    else if (currentQuickFilter === "budget35k") matchesQuick = p.price <= 35000;
+    else if (currentQuickFilter === "window") matchesQuick = p.category === "window_ac";
+
+    return matchesCategory && matchesTonnage && matchesStar && matchesSearch && matchesQuick;
   });
 
   const countBadge = document.getElementById("productCountBadge");
@@ -917,10 +931,18 @@ function setStarFilter(star) {
   renderProductCatalog();
 }
 
+function applyQuickFilter(filterType, element) {
+  currentQuickFilter = filterType;
+  document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
+  if (element) element.classList.add("active");
+  renderProductCatalog();
+}
+
 function resetFilters() {
   currentCategory = "all";
   currentTonnageFilter = "all";
   currentStarFilter = "all";
+  currentQuickFilter = "all";
   searchQuery = "";
 
   const searchInput = document.getElementById("catalogSearch");
@@ -934,6 +956,10 @@ function resetFilters() {
 
   document.querySelectorAll(".cat-tab").forEach((tab, index) => {
     tab.classList.toggle("active", index === 0);
+  });
+
+  document.querySelectorAll(".filter-chip").forEach((chip, index) => {
+    chip.classList.toggle("active", index === 0);
   });
 
   renderProductCatalog();
@@ -2276,4 +2302,250 @@ async function lookupOrderTracking(overrideId = "") {
       </div>
     `;
   }
+}
+
+// ==========================================================================
+// 23. THEME ENGINE (DARK / LIGHT LUXURY THEME)
+// ==========================================================================
+function initTheme() {
+  const savedTheme = localStorage.getItem("hitachi_theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  document.documentElement.setAttribute("data-theme", savedTheme);
+  updateThemeIcon(savedTheme);
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute("data-theme") || "light";
+  const nextTheme = current === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", nextTheme);
+  localStorage.setItem("hitachi_theme", nextTheme);
+  updateThemeIcon(nextTheme);
+  showToast(nextTheme === "dark" ? "🌙 Obsidian Midnight Theme Activated" : "☀️ Arctic Daylight Theme Activated");
+}
+
+function updateThemeIcon(theme) {
+  const btn = document.getElementById("themeToggleBtn");
+  if (btn) {
+    btn.textContent = theme === "dark" ? "☀️" : "🌙";
+    btn.title = theme === "dark" ? "Switch to Light Theme" : "Switch to Dark Theme";
+  }
+}
+
+// ==========================================================================
+// 24. HERO INTERACTIVE AC COOLING SIMULATOR
+// ==========================================================================
+let simTemp = 18;
+let simMode = "jet";
+
+const SIM_TEMP_DATA = {
+  16: { status: "Arctic JetCool Active (Desert 52°C Override)", watts: "820 Watts", savings: "46% vs Non-Inv" },
+  17: { status: "Extreme Fast Chill Active", watts: "750 Watts", savings: "52% vs Non-Inv" },
+  18: { status: "Rapid Inverter Chilling Active", watts: "680 Watts", savings: "58% vs Non-Inv" },
+  19: { status: "Heavy Cooling Mode", watts: "610 Watts", savings: "61% vs Non-Inv" },
+  20: { status: "Comfort Tropical Cooling", watts: "540 Watts", savings: "64% vs Non-Inv" },
+  21: { status: "Quiet Precision Flow", watts: "480 Watts", savings: "67% vs Non-Inv" },
+  22: { status: "Pleasant Japanese Breeze", watts: "420 Watts", savings: "71% vs Non-Inv" },
+  23: { status: "Balanced Low-Power Chilling", watts: "370 Watts", savings: "75% vs Non-Inv" },
+  24: { status: "Govt. Standard Optimal Eco Mode", watts: "330 Watts", savings: "78% vs Non-Inv" },
+  25: { status: "High Efficiency Night Flow", watts: "290 Watts", savings: "80% vs Non-Inv" },
+  26: { status: "Ultra-Power Saver Whisper Mode", watts: "260 Watts", savings: "83% vs Non-Inv" }
+};
+
+function initACSimulator() {
+  updateSimulatorUI();
+}
+
+function adjustSimulatorTemp(delta) {
+  simTemp = Math.max(16, Math.min(26, simTemp + delta));
+  updateSimulatorUI();
+}
+
+function setSimulatorMode(mode, targetTemp, element) {
+  simMode = mode;
+  simTemp = targetTemp;
+  document.querySelectorAll(".sim-mode-btn").forEach(b => b.classList.remove("active"));
+  if (element) element.classList.add("active");
+  
+  if (mode === "frost") {
+    const disp = document.getElementById("acDisplayTemp");
+    const sub = document.getElementById("simStatusSub");
+    if (disp) disp.textContent = "CL";
+    if (sub) sub.textContent = "FrostWash Coil Freezing (-15°C Active)";
+    const watts = document.getElementById("simWattsVal");
+    if (watts) watts.textContent = "120 Watts";
+    const sav = document.getElementById("simSavingsVal");
+    if (sav) sav.textContent = "Auto-Sanitizing";
+    showToast("❄️ FrostWash Active: Freezing coil to -15°C to flush bacteria & desert dust!");
+    return;
+  }
+  
+  updateSimulatorUI();
+}
+
+function updateSimulatorUI() {
+  const disp = document.getElementById("acDisplayTemp");
+  const big = document.getElementById("simTempBig");
+  const sub = document.getElementById("simStatusSub");
+  const watts = document.getElementById("simWattsVal");
+  const sav = document.getElementById("simSavingsVal");
+
+  if (disp) disp.textContent = `${simTemp}°C`;
+  if (big) big.textContent = `${simTemp}°C`;
+
+  const info = SIM_TEMP_DATA[simTemp] || SIM_TEMP_DATA[18];
+  if (sub) sub.textContent = info.status;
+  if (watts) watts.textContent = info.watts;
+  if (sav) sav.textContent = info.savings;
+}
+
+// ==========================================================================
+// 25. HITACHI 360° TECH HOTSPOT EXPLORER
+// ==========================================================================
+const HOTSPOTS_DATA = {
+  frostwash: {
+    badge: "FEATURE #1: PATENTED COIL HYGIENE",
+    title: "FrostWash 3.0 Self-Cleaning Technology",
+    desc: "In Rajasthan's dusty climate, dust builds up inside cooling coils within weeks, degrading cooling by 40%. Hitachi's patented FrostWash freezes the heat exchanger to -15°C, trapping airborne dust and bacteria, then instantly melts the frost to flush it cleanly away through the drain pipe.",
+    checklist: [
+      "Eliminates 99.9% viruses, bacteria, and fine desert dust particles",
+      "Saves up to ₹3,500/year in routine chemical coil servicing costs",
+      "Maintains factory-fresh airflow velocity for 10+ years"
+    ]
+  },
+  compressor: {
+    badge: "FEATURE #2: DESERT HEAT SHIELD",
+    title: "52°C Heavy Tropical Rotary Compressor",
+    desc: "Standard AC compressors trip or blow hot air when outside temperatures cross 45°C in Sikar. Hitachi's Heavy Tropical Rotary Compressor features specialized rare-earth permanent magnets and high-pressure chambers that maintain nonstop arctic chilling even at blistering 52°C desert heatwaves.",
+    checklist: [
+      "Continuous cooling guaranteed up to 52°C ambient Rajasthan summer",
+      "Backed by an official 10-Year Hitachi manufacturer compressor warranty",
+      "Overboost capability pushes capacity to 110% when guests arrive"
+    ]
+  },
+  copper: {
+    badge: "FEATURE #3: DURABILITY & HEAT TRANSFER",
+    title: "100% Inner-Grooved Copper Condenser Tubes",
+    desc: "Every Hitachi unit sold at K.K. Enterprises uses 100% genuine copper coils with micro-grooved internal rifling. This increases refrigerant surface contact area, delivering 3x faster heat rejection while offering maximum resistance against hard water and saline atmospheric oxidation.",
+    checklist: [
+      "100% Pure Copper Tubes — zero aluminum compromise",
+      "Inner-grooved rifling speeds up heat transfer and room pull-down by 30%",
+      "Extreme durability with easy reparability and high scrap value"
+    ]
+  },
+  goldfin: {
+    badge: "FEATURE #4: ANTI-CORROSION SHIELD",
+    title: "Dual Gold Fin Desert Sand Barrier",
+    desc: "Shekhawati's sandstorms and airborne salts can corrode standard AC fins, causing gas leaks. Hitachi equips both indoor and outdoor condenser fins with a double-layered hydrophilic Gold Fin coating that prevents dust accumulation and moisture stagnation.",
+    checklist: [
+      "Salt-spray tested for 1,500+ hours of rust-free continuous duty",
+      "Hydrophilic golden coating ensures rapid condensation runoff",
+      "Maintains maximum heat exchange efficiency year after year"
+    ]
+  },
+  isee: {
+    badge: "FEATURE #5: ARTIFICIAL INTELLIGENCE",
+    title: "iSee Intelligent Human Presence Sensor",
+    desc: "An infrared optical sensor scans the room in real time, detecting human presence, location, and activity levels. If people move, cool air gently follows; if the room becomes empty, the unit automatically dials down power consumption to prevent electricity waste.",
+    checklist: [
+      "Smart follow-me airflow directs cool drafts directly toward occupants",
+      "Automatic energy-saving step-down when room is vacated",
+      "Prevents chilly draft discomfort during sleeping hours"
+    ]
+  }
+};
+
+function initTechExplorer() {
+  selectHotspot("frostwash", document.querySelector(".pin-frostwash"));
+}
+
+function selectHotspot(key, element) {
+  const data = HOTSPOTS_DATA[key];
+  if (!data) return;
+
+  document.querySelectorAll(".hotspot-pin").forEach(p => p.classList.remove("active"));
+  if (element) element.classList.add("active");
+
+  const b = document.getElementById("hotspotBadge");
+  const t = document.getElementById("hotspotTitle");
+  const d = document.getElementById("hotspotDesc");
+  const c = document.getElementById("hotspotChecklist");
+
+  if (b) b.textContent = data.badge;
+  if (t) t.textContent = data.title;
+  if (d) d.textContent = data.desc;
+  if (c) {
+    c.innerHTML = data.checklist.map(item => `
+      <div class="tech-check-item">
+        <span class="tech-check-icon">✓</span>
+        <span>${item}</span>
+      </div>
+    `).join("");
+  }
+}
+
+// ==========================================================================
+// 26. "FIND BY MONTHLY BUDGET" EMI MATCHER
+// ==========================================================================
+function initEmiBudgetMatcher() {
+  updateEmiBudgetFilter(3000);
+}
+
+function updateEmiBudgetFilter(maxEmiVal) {
+  const readout = document.getElementById("emiBudgetReadout");
+  if (readout) readout.textContent = `₹${Number(maxEmiVal).toLocaleString("en-IN")} / mo`;
+
+  const container = document.getElementById("emiMatchResultsGrid");
+  if (!container) return;
+
+  const matches = PRODUCTS_DATA.filter(p => {
+    const approxEmi = Math.round(p.price / 18);
+    return approxEmi <= Number(maxEmiVal);
+  }).slice(0, 4);
+
+  if (matches.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 20px; color: #94a3b8;">
+        Slide higher to view matching high-tonnage or flagship models.
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = matches.map(p => {
+    const emi18 = Math.round(p.price / 18);
+    return `
+      <div class="emi-match-item">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+            <span style="font-size: 0.75rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 2px 8px; border-radius: 4px; font-weight: 700;">
+              ${p.tonnage} • ${p.starRating}★
+            </span>
+            <span style="font-size: 0.72rem; color: #fbbf24; font-weight: 700;">0% Interest</span>
+          </div>
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: #ffffff; line-height: 1.4; margin-bottom: 8px;">
+            ${p.name}
+          </h4>
+          <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 12px;">
+            Showroom Offer Price: <strong style="color: #ffffff;">₹${p.price.toLocaleString("en-IN")}</strong>
+          </div>
+        </div>
+
+        <div style="padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <div>
+              <div style="font-size: 0.7rem; color: #94a3b8;">Starts from</div>
+              <div style="font-size: 1.1rem; font-weight: 800; color: #fbbf24; font-family: var(--font-display);">
+                ₹${emi18.toLocaleString("en-IN")}<span style="font-size: 0.75rem; color: #cbd5e1;">/mo</span>
+              </div>
+            </div>
+            <div style="font-size: 0.75rem; color: #cbd5e1; text-align: right;">
+              18 Mos No-Cost EMI
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="buyNow('${p.id}')" style="width: 100%; padding: 8px 12px; font-size: 0.82rem;">
+            ⚡ Buy on 0% EMI
+          </button>
+        </div>
+      </div>
+    `;
+  }).join("");
 }
