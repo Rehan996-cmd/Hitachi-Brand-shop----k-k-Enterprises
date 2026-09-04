@@ -460,6 +460,19 @@ const server = http.createServer(async (req, res) => {
 });
 
 if (require.main === module) {
+  server.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      console.log(`\n======================================================`);
+      console.log(`ℹ️ Website is ALREADY RUNNING on http://localhost:${PORT}`);
+      console.log(`🌐 Open in your browser: http://localhost:${PORT}`);
+      console.log(`======================================================\n`);
+      process.exit(0);
+    } else {
+      console.error('Server error:', err);
+      process.exit(1);
+    }
+  });
+
   server.listen(PORT, () => {
     const url = `http://localhost:${PORT}`;
     console.log(`\n======================================================`);
