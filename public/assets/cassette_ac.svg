@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cassetteBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="cassetteShadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="600" height="450" rx="16" fill="#f8fafc"/>
+  <circle cx="300" cy="225" r="190" fill="#e0f2fe" opacity="0.3"/>
+
+  <!-- Ceiling Context Lines -->
+  <line x1="40" y1="90" x2="560" y2="90" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="8 8"/>
+  <line x1="40" y1="360" x2="560" y2="360" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="8 8"/>
+
+  <!-- Cassette Main Outer Bezel Panel -->
+  <g filter="url(#cassetteShadow)">
+    <rect x="110" y="80" width="380" height="290" rx="28" fill="url(#cassetteBody)" stroke="#cbd5e1" stroke-width="2"/>
+  </g>
+
+  <!-- Central Air Intake Grille -->
+  <rect x="190" y="145" width="220" height="160" rx="16" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- Mesh Holes pattern -->
+  <g fill="#cbd5e1">
+    <circle cx="212" cy="165" r="3"/><circle cx="230" cy="165" r="3"/><circle cx="248" cy="165" r="3"/><circle cx="266" cy="165" r="3"/><circle cx="284" cy="165" r="3"/><circle cx="302" cy="165" r="3"/><circle cx="320" cy="165" r="3"/><circle cx="338" cy="165" r="3"/><circle cx="356" cy="165" r="3"/><circle cx="374" cy="165" r="3"/><circle cx="392" cy="165" r="3"/><circle cx="212" cy="184" r="3"/><circle cx="230" cy="184" r="3"/><circle cx="248" cy="184" r="3"/><circle cx="266" cy="184" r="3"/><circle cx="284" cy="184" r="3"/><circle cx="302" cy="184" r="3"/><circle cx="320" cy="184" r="3"/><circle cx="338" cy="184" r="3"/><circle cx="356" cy="184" r="3"/><circle cx="374" cy="184" r="3"/><circle cx="392" cy="184" r="3"/><circle cx="212" cy="203" r="3"/><circle cx="230" cy="203" r="3"/><circle cx="248" cy="203" r="3"/><circle cx="266" cy="203" r="3"/><circle cx="284" cy="203" r="3"/><circle cx="302" cy="203" r="3"/><circle cx="320" cy="203" r="3"/><circle cx="338" cy="203" r="3"/><circle cx="356" cy="203" r="3"/><circle cx="374" cy="203" r="3"/><circle cx="392" cy="203" r="3"/><circle cx="212" cy="222" r="3"/><circle cx="230" cy="222" r="3"/><circle cx="248" cy="222" r="3"/><circle cx="266" cy="222" r="3"/><circle cx="284" cy="222" r="3"/><circle cx="302" cy="222" r="3"/><circle cx="320" cy="222" r="3"/><circle cx="338" cy="222" r="3"/><circle cx="356" cy="222" r="3"/><circle cx="374" cy="222" r="3"/><circle cx="392" cy="222" r="3"/><circle cx="212" cy="241" r="3"/><circle cx="230" cy="241" r="3"/><circle cx="248" cy="241" r="3"/><circle cx="266" cy="241" r="3"/><circle cx="284" cy="241" r="3"/><circle cx="302" cy="241" r="3"/><circle cx="320" cy="241" r="3"/><circle cx="338" cy="241" r="3"/><circle cx="356" cy="241" r="3"/><circle cx="374" cy="241" r="3"/><circle cx="392" cy="241" r="3"/><circle cx="212" cy="260" r="3"/><circle cx="230" cy="260" r="3"/><circle cx="248" cy="260" r="3"/><circle cx="266" cy="260" r="3"/><circle cx="284" cy="260" r="3"/><circle cx="302" cy="260" r="3"/><circle cx="320" cy="260" r="3"/><circle cx="338" cy="260" r="3"/><circle cx="356" cy="260" r="3"/><circle cx="374" cy="260" r="3"/><circle cx="392" cy="260" r="3"/><circle cx="212" cy="279" r="3"/><circle cx="230" cy="279" r="3"/><circle cx="248" cy="279" r="3"/><circle cx="266" cy="279" r="3"/><circle cx="284" cy="279" r="3"/><circle cx="302" cy="279" r="3"/><circle cx="320" cy="279" r="3"/><circle cx="338" cy="279" r="3"/><circle cx="356" cy="279" r="3"/><circle cx="374" cy="279" r="3"/><circle cx="392" cy="279" r="3"/>
+  </g>
+
+  <!-- 4-Way Discharge Louvers (Top, Bottom, Left, Right) -->
+  <!-- Top Louver -->
+  <rect x="190" y="98" width="220" height="30" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="205" y1="113" x2="395" y2="113" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+  <!-- Bottom Louver -->
+  <rect x="190" y="322" width="220" height="30" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="205" y1="337" x2="395" y2="337" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+  <!-- Left Louver -->
+  <rect x="128" y="145" width="45" height="160" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="150" y1="160" x2="150" y2="290" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+  <!-- Right Louver -->
+  <rect x="427" y="145" width="45" height="160" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="450" y1="160" x2="450" y2="290" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Brand Center Plate -->
+  <rect x="250" y="205" width="100" height="40" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="300" y="226" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="13" fill="#e60012" text-anchor="middle" letter-spacing="1">HITACHI</text>
+  <text x="300" y="238" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7.5" fill="#64748b" text-anchor="middle">360° ROUND FLOW</text>
+
+  <!-- Status Sensor Pod -->
+  <circle cx="462" cy="112" r="10" fill="#0f172a"/>
+  <circle cx="462" cy="112" r="4" fill="#38bdf8"/>
+
+  <!-- Airflow Indicator Arrows -->
+  <g stroke="#38bdf8" stroke-width="2" fill="none" opacity="0.7">
+    <path d="M 300 80 L 300 65 M 295 72 L 300 65 L 305 72"/>
+    <path d="M 300 370 L 300 385 M 295 378 L 300 385 L 305 378"/>
+    <path d="M 95 225 L 80 225 M 88 220 L 80 225 L 88 230"/>
+    <path d="M 505 225 L 520 225 M 512 220 L 520 225 L 512 230"/>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+type User @table {
+  username: String!
+  email: String!
+  avatarUrl: String
+  bio: String
+}
+
+type Room @table {
+  name: String!
+  createdAt: Timestamp!
+  description: String
+  createdBy: User
+}
+
+type Message @table {
+  content: String!
+  createdAt: Timestamp!
+  room: Room!
+  sender: User!
+}
+
+type Member @table {
+  joinedAt: Timestamp!
+  user: User!
+  room: Room!
+}
+
+type RoomSetting @table {
+  isPrivate: Boolean!
+  themeColor: String
+  maxParticipants: Int
+  room: Room!
+}

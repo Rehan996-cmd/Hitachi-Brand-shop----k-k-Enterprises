@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hitachi Brand Shop - K.K. Enterprises | Sikar, Rajasthan | Official Dealer for ACs & Home Appliances</title>
+  <meta name="description" content="Official Hitachi Brand Shop in Sikar - K.K. Enterprises. Discover Hitachi Split ACs (airHome series 1.5 Ton 3-Star & 5-Star Copper), Window ACs (Kaze Plus), Commercial Cassette & Set-Free VRF ACs, Washing Machines, Home Inverters & Refrigerators. Best prices, 0% EMI & same-day installation." />
+  <meta name="keywords" content="Hitachi Brand Shop Sikar, K.K. Enterprises Hitachi, Hitachi AC Sikar, airHome Split AC 1.5 Ton, Hitachi Kaze Plus Window AC, Hitachi Cassette AC, Hitachi VRF Sikar, Hitachi Washing Machine, Home Inverter Sikar Rajasthan" />
+
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:title" content="Hitachi Brand Shop - K.K. Enterprises | Sikar, Rajasthan" />
+  <meta property="og:description" content="Authorized Hitachi Brand Shop for Inverter Split ACs, Window ACs, VRF Systems, Washing Machines, and Home Appliances. Genuine Warranty & Expert Installation in Sikar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/storefront.png" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Schema.org JSON-LD structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "Hitachi Brand Shop - K.K. Enterprises",
+    "image": "assets/storefront.png",
+    "description": "Authorized Dealer and Official Brand Shop of Hitachi Air Conditioning, Washing Machines, Refrigerators and Home Appliances in Sikar, Rajasthan.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ganpati Tower, Mohalla Qureshi / Sikar Roadlines Area",
+      "addressLocality": "Sikar",
+      "addressRegion": "Rajasthan",
+      "postalCode": "332001",
+      "addressCountry": "IN"
+    },
+    "telephone": "+919587111100",
+    "priceRange": "₹11,990 - ₹2,50,000",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "10:00",
+        "closes": "20:30"
+      }
+    ],
+    "brand": "Hitachi"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- 1. TOP ANNOUNCEMENT BAR -->
+  <div class="top-notice-bar">
+    <div class="container top-notice-content">
+      <div class="notice-left">
+        <span class="notice-tag">EXCLUSIVE BRAND SHOP OFFER</span>
+        <span>Get Up to ₹5,000 Instant Cashback + 0% Interest EMI on Hitachi airHome 5-Star Inverter ACs!</span>
+      </div>
+      <div class="notice-right">
+        <span class="notice-link">📍 Ganpati Tower, Sikar, Rajasthan</span>
+        <a href="tel:+919587111100" class="notice-link">📞 +91 95871 11100</a>
+        <a href="https://wa.me/919587111100" target="_blank" class="notice-link" style="color: #4ade80;">💬 WhatsApp Inquiry</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MAIN HEADER NAVIGATION -->
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="brand-wrapper">
+        <a href="#hero" style="display: flex; align-items: center; gap: 14px;">
+          <span class="brand-hitachi">HITACHI</span>
+          <div class="brand-tag-wrapper">
+            <span class="brand-shop-label">Brand Shop</span>
+            <span class="dealer-name">K.K. Enterprises</span>
+            <span class="dealer-loc">Auth. Dealer • Sikar (Raj.)</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" id="mainNavMenu">
+        <li><a href="#catalog" class="nav-link" onclick="setCategory('split_ac')">Split ACs</a></li>
+        <li><a href="#catalog" class="nav-link" onclick="setCategory('window_ac')">Window ACs</a></li>
+        <li><a href="#commercial" class="nav-link">Commercial &amp; VRF</a></li>
+        <li><a href="#catalog" class="nav-link" onclick="setCategory('washing_machines')">Washing Machines</a></li>
+        <li><a href="#catalog" class="nav-link" onclick="setCategory('appliances')">Refrigerators &amp; Inverters</a></li>
+        <li><a href="#calculator" class="nav-link">AC Size Calculator</a></li>
+        <li><a href="#showroom" class="nav-link">Our Showroom</a></li>
+        <li><a href="#service" class="nav-link">Service &amp; AMC</a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <button class="header-track-btn" onclick="openTrackModal()" title="Track Your Order">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          Track Order
+        </button>
+        <button class="header-cart-btn" id="openCartBtn" onclick="toggleCartDrawer()" title="View Shopping Cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+          Cart <span class="cart-badge" id="headerCartCount">0</span>
+        </button>
+        <a href="https://wa.me/919587111100?text=Hello%20Hitachi%20Brand%20Shop%20K.K.%20Enterprises%2C%20I%20want%20to%20inquire%20about%20AC%20models%20and%20offers." 
+           target="_blank" 
+           class="btn btn-whatsapp"
+           style="display: none; @media(min-width: 1024px){display: inline-flex;}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.072-1.892-.472-1.396-.603-2.316-1.956-2.388-2.052-.072-.096-.582-.774-.582-1.477 0-.702.367-1.047.502-1.191.134-.144.293-.18.39-.18.096 0 .193.001.278.006.089.005.207-.034.323.245.12.289.41 1.002.447 1.075.036.072.06.156.012.252-.048.096-.072.156-.144.24-.072.084-.15.187-.215.252-.072.072-.147.15-.063.294.084.144.374.618.803 1.001.552.493 1.018.646 1.162.718.144.072.228.06.312-.036.084-.096.36-419.456-.563.096-.144.192-.12.324-.072.132.048.837.395.981.467.144.072.24.108.276.168.036.06.036.348-.108.753z"/></svg>
+          Hotline
+        </a>
+        <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <div class="hero-glow-blob"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-pill">
+          <span class="pulse-dot"></span>
+          <span>Official Hitachi Brand Shop • Sikar, Rajasthan</span>
+        </div>
+
+        <h1 class="hero-title">
+          Mastering Japanese Cooling For <span class="text-gradient-red">Extreme Desert Heat</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Experience the latest <strong>airHome series</strong>, <strong>Hitachi Kaze Plus Window ACs</strong>, and <strong>Set-Free Commercial VRF Systems</strong> at K.K. Enterprises. 100% Inner Grooved Copper Condensers, FrostWash self-cleaning, and guaranteed cooling up to 52°C ambient temperatures.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#calculator" class="btn btn-primary" style="padding: 14px 26px; font-size: 1rem;">
+            ❄️ Calculate Room AC Tonnage
+          </a>
+          <a href="#catalog" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: #ffffff; padding: 14px 24px;">
+            Explore All 2026 Models
+          </a>
+          <button class="btn btn-outline" onclick="openQuoteModal()" style="border-color: rgba(255,255,255,0.3); color: #ffffff; padding: 14px 24px;">
+            📋 Request Showroom Price List
+          </button>
+        </div>
+
+        <!-- Trust Stats -->
+        <div class="hero-stats-row">
+          <div class="hero-stat-item">
+            <strong>100% Copper</strong>
+            <span>Inner Grooved Condensers</span>
+          </div>
+          <div class="hero-stat-item">
+            <strong>Up to 52°C</strong>
+            <span>Continuous Tropical Cooling</span>
+          </div>
+          <div class="hero-stat-item">
+            <strong>10 Years</strong>
+            <span>Inverter Compressor Warranty</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="hero-visual-card">
+        <div class="storefront-preview-box">
+          <img src="assets/storefront.png" alt="Hitachi Brand Shop - K.K. Enterprises Storefront Sikar" class="storefront-img" />
+          <div class="storefront-tag">
+            <span>🏬</span> Official Hitachi Brand Shop Storefront • Sikar
+          </div>
+        </div>
+
+        <div class="hero-ac-floating-card">
+          <img src="assets/split_ac_airhome.jpg" alt="Hitachi airHome Inverter AC" class="hero-ac-thumb" />
+          <div class="hero-ac-info">
+            <strong>airHome 400 Inverter Split AC</strong>
+            <span>1.5 Ton 5-Star • FrostWash • 100% Copper</span>
+          </div>
+          <div class="hero-ac-price">
+            <span class="p-amt">₹44,990</span>
+            <span class="p-badge">0% EMI Available</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TRUST BAR -->
+  <section class="trust-bar-section">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon-box">🏆</div>
+        <div class="trust-content">
+          <strong>100% Genuine Products</strong>
+          <p>Direct manufacturer supply with official brand warranty</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon-box">⚡</div>
+        <div class="trust-content">
+          <strong>Same-Day Installation</strong>
+          <p>Certified Hitachi technicians across Sikar &amp; surrounding areas</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon-box">💳</div>
+        <div class="trust-content">
+          <strong>0% Interest EMI</strong>
+          <p>Bajaj Finserv, HDFC, ICICI, SBI on-the-spot approval</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon-box">🔧</div>
+        <div class="trust-content">
+          <strong>Lifetime Service Support</strong>
+          <p>Dedicated K.K. Enterprises customer care &amp; AMC plans</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. INTERACTIVE AC TONNAGE CALCULATOR -->
+  <section class="section section-alt" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Interactive Sizing Tool</span>
+        <h2 class="section-title">Smart Room AC Tonnage Calculator</h2>
+        <p class="section-desc">
+          Ensure maximum cooling efficiency and minimum electricity bills by choosing the exact AC tonnage tailored to your room size and heat exposure.
+        </p>
+      </div>
+
+      <div class="calc-card-wrapper">
+        <!-- Inputs Column -->
+        <div class="calc-inputs-pane">
+          <h3 class="calc-title">Step 1: Enter Room Dimensions &amp; Exposure</h3>
+          <p class="calc-subtitle">Adjust the sliders to reflect your room's measurements.</p>
+
+          <div class="calc-control-group">
+            <div class="calc-label-row">
+              <span>Room Length (Feet)</span>
+              <span class="calc-val-badge" id="calcLengthVal">14 ft</span>
+            </div>
+            <input type="range" id="calcLength" class="calc-slider" min="8" max="30" value="14" step="1" />
+          </div>
+
+          <div class="calc-control-group">
+            <div class="calc-label-row">
+              <span>Room Width (Feet)</span>
+              <span class="calc-val-badge" id="calcWidthVal">12 ft</span>
+            </div>
+            <input type="range" id="calcWidth" class="calc-slider" min="8" max="25" value="12" step="1" />
+          </div>
+
+          <div class="calc-control-group">
+            <div class="calc-label-row">
+              <span>Rajasthan Climate &amp; Heat Factors</span>
+            </div>
+            <div class="calc-factors-grid">
+              <div>
+                <label style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 4px;">FLOOR LEVEL</label>
+                <select id="calcFloor" class="calc-select">
+                  <option value="ground">Ground / Middle Floor</option>
+                  <option value="top">Top Floor (Direct Sun On Roof)</option>
+                </select>
+              </div>
+
+              <div>
+                <label style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 4px;">SUNLIGHT EXPOSURE</label>
+                <select id="calcSun" class="calc-select">
+                  <option value="normal">Normal / Shaded Windows</option>
+                  <option value="high">High Direct Sun Facing</option>
+                </select>
+              </div>
+
+              <div>
+                <label style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 4px;">TYPICAL OCCUPANCY</label>
+                <select id="calcPeople" class="calc-select">
+                  <option value="standard">1 to 2 People</option>
+                  <option value="many">3+ People / Electronic Appliances</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Column -->
+        <div class="calc-results-pane">
+          <div class="calc-area-indicator">
+            <div>
+              <span>Calculated Room Carpet Area</span>
+              <p style="font-size: 0.8rem; color: #cbd5e1; margin: 0;">Length × Width Floor Footprint</p>
+            </div>
+            <strong id="calcAreaDisplay">168 sq.ft</strong>
+          </div>
+
+          <div id="calcRecommendation">
+            <!-- Populated dynamically by app.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Energy Savings Estimator -->
+      <div class="savings-box" id="savings">
+        <div style="text-align: center; margin-bottom: 24px;">
+          <span class="section-eyebrow">Electricity Bill Analysis</span>
+          <h3 style="font-size: 1.5rem; font-weight: 800;">See How Much A 5-Star Hitachi Inverter Saves You in Sikar</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Compare actual power consumption against older non-inverter air conditioners.</p>
+        </div>
+
+        <div class="savings-inputs-row">
+          <div>
+            <div class="calc-label-row">
+              <span>Average Daily Usage</span>
+              <span class="calc-val-badge" id="savingsHoursVal">8 Hours / Day</span>
+            </div>
+            <input type="range" id="savingsHours" class="calc-slider" min="4" max="18" value="8" step="1" />
+          </div>
+
+          <div>
+            <div class="calc-label-row">
+              <span>Electricity Cost per Unit (kWh)</span>
+              <span class="calc-val-badge" id="savingsTariffVal">₹8 / Unit</span>
+            </div>
+            <input type="range" id="savingsTariff" class="calc-slider" min="6" max="14" value="8" step="0.5" />
+          </div>
+        </div>
+
+        <div class="savings-compare-grid">
+          <div class="savings-card">
+            <h5>10-Year-Old Non-Inverter AC</h5>
+            <div class="savings-amt" id="costOldAc" style="color: #ef4444;">₹20,480</div>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 6px;">Est. 2560 units/yr</p>
+          </div>
+
+          <div class="savings-card">
+            <h5>Hitachi 3-Star Inverter AC</h5>
+            <div class="savings-amt" id="cost3StarAc" style="color: #f59e0b;">₹12,160</div>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 6px;">Est. 1520 units/yr</p>
+          </div>
+
+          <div class="savings-card card-5star">
+            <h5>Hitachi 5-Star airHome AC</h5>
+            <div class="savings-amt" id="cost5StarAc" style="color: #059669;">₹8,320</div>
+            <p style="font-size: 0.78rem; color: #2563eb; margin-top: 6px;">Est. 1040 units/yr</p>
+          </div>
+
+          <div class="savings-card card-savings">
+            <h5>Your Annual Power Savings</h5>
+            <div class="savings-amt" id="annualSavingsAmount">₹12,160 / yr</div>
+            <p style="font-size: 0.82rem; margin-top: 6px; opacity: 0.9;">The 5-Star AC pays for itself within 3 summers!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. PRODUCT CATALOG & FILTERS -->
+  <section class="section" id="catalog">
+    <div class="container">
+      <div class="section-header" id="catalogSection">
+        <span class="section-eyebrow">Full 2026 Inventory</span>
+        <h2 class="section-title">Hitachi Air Conditioners &amp; Home Appliances</h2>
+        <p class="section-desc">
+          Browse our complete range of authorized Hitachi Split ACs, Window ACs, Heavy Commercial VRF units, Washing Machines, and Home Inverters available at K.K. Enterprises.
+        </p>
+      </div>
+
+      <!-- Filter Controls Panel -->
+      <div class="catalog-control-panel">
+        <!-- Category Tabs -->
+        <div class="category-tabs-row">
+          <button class="cat-tab active" onclick="setCategory('all', this)">All Products</button>
+          <button class="cat-tab" onclick="setCategory('split_ac', this)">Split Air Conditioners</button>
+          <button class="cat-tab" onclick="setCategory('window_ac', this)">Window ACs (Kaze Plus)</button>
+          <button class="cat-tab" onclick="setCategory('commercial_ac', this)">Commercial, VRF &amp; Cassette</button>
+          <button class="cat-tab" onclick="setCategory('washing_machines', this)">Washing Machines</button>
+          <button class="cat-tab" onclick="setCategory('appliances', this)">Refrigerators &amp; Inverters</button>
+        </div>
+
+        <!-- Secondary Filters: Search & Dropdowns -->
+        <div class="secondary-filters-row">
+          <div class="search-box-wrap">
+            <svg class="search-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="catalogSearch" class="search-input" placeholder="Search by model name, series (e.g. airHome, Kaze Plus), or capacity..." />
+          </div>
+
+          <div class="filter-dropdowns-group">
+            <select id="tonnageFilterSelect" class="catalog-select" aria-label="Filter by Tonnage">
+              <option value="all">Capacity: All</option>
+              <option value="1.0">1.0 Ton</option>
+              <option value="1.5">1.5 Ton (Most Popular)</option>
+              <option value="2.0">2.0 Ton</option>
+              <option value="commercial">Commercial (3.0T+)</option>
+            </select>
+
+            <select id="starFilterSelect" class="catalog-select" aria-label="Filter by Star Rating">
+              <option value="all">Energy Rating: All</option>
+              <option value="5">★ 5-Star Highest Efficiency</option>
+              <option value="3">★ 3-Star Value Choice</option>
+            </select>
+
+            <button class="btn btn-outline" onclick="resetFilters()" style="padding: 8px 14px; font-size: 0.85rem;">
+              Reset Filters
+            </button>
+
+            <span class="count-indicator" id="productCountBadge">Loading models...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="product-grid" id="productGrid">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. COMMERCIAL HVAC, VRF & CASSETTE SPOTLIGHT -->
+  <section class="section section-dark" id="commercial">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow" style="color: #38bdf8;">Enterprise &amp; Architectural Cooling</span>
+        <h2 class="section-title">Hitachi Set-Free VRF &amp; Commercial HVAC Solutions</h2>
+        <p class="section-desc">
+          Designed for luxury bungalows, hospitals, hotels, multi-story offices, and large banquet halls across Rajasthan.
+        </p>
+      </div>
+
+      <div class="vrf-grid">
+        <div class="vrf-content-col">
+          <h3 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 16px;">
+            One Master Outdoor Unit. Up to 64 Independently Controlled Rooms.
+          </h3>
+          <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.6;">
+            Hitachi <strong>Set-Free VRF (Variable Refrigerant Flow)</strong> systems deliver simultaneous cooling and heating with whisper-silent indoor units. Paired with 4-Way Round Flow Cassette ACs, Concealed Ceiling Ducts, and Floor Standing Tower ACs, K.K. Enterprises provides end-to-end HVAC engineering.
+          </p>
+
+          <ul class="vrf-features-list">
+            <li>
+              <span class="v-check">✓</span>
+              <div>
+                <strong style="color: #ffffff;">Patented DC Inverter Scroll Compressor:</strong>
+                Ultra-high IPLV seasonal efficiency that cuts commercial power consumption by up to 40%.
+              </div>
+            </li>
+            <li>
+              <span class="v-check">✓</span>
+              <div>
+                <strong style="color: #ffffff;">Extreme Weather Resilience:</strong>
+                Operates without tripping even in scorching 54°C desert ambient heat with anti-corrosive blue-fin coils.
+              </div>
+            </li>
+            <li>
+              <span class="v-check">✓</span>
+              <div>
+                <strong style="color: #ffffff;">Architectural Aesthetics:</strong>
+                Zero bulky outdoor units cluttering your facade. Completely hidden ceiling ductwork and designer round-flow cassettes.
+              </div>
+            </li>
+            <li>
+              <span class="v-check">✓</span>
+              <div>
+                <strong style="color: #ffffff;">Turnkey Engineering by K.K. Enterprises:</strong>
+                Heat-load estimation, duct layout CAD drafting, refrigerant copper piping, commissioning, and AMC.
+              </div>
+            </li>
+          </ul>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <button class="btn btn-primary" onclick="openQuoteModal('Hitachi Commercial VRF / Cassette Project')">
+              Request Project Site Survey &amp; Quote
+            </button>
+            <a href="https://wa.me/919587111100?text=Hello%20K.K.%20Enterprises%2C%20I%20have%20a%20commercial%20%2F%20VRF%20project%20inquiry%20for%20my%20building%20in%20Sikar." 
+               target="_blank" 
+               class="btn btn-whatsapp">
+              WhatsApp Project Desk
+            </a>
+          </div>
+        </div>
+
+        <div class="vrf-card-wrap">
+          <img src="assets/vrf_system.svg" alt="Hitachi Set-Free Commercial VRF Outdoor Unit" style="width: 100%; max-height: 280px; object-fit: contain; margin-bottom: 20px;" />
+          
+          <div class="commercial-type-chips">
+            <div class="comm-chip">
+              <strong>4-Way Round Flow Cassette</strong>
+              <p>Uniform 360° draft-free cooling with built-in 850mm high-head drain pump.</p>
+            </div>
+            <div class="comm-chip">
+              <strong>Floor Standing Tower AC</strong>
+              <p>Heavy air-throw up to 20 meters for banquets, restaurants, and showrooms.</p>
+            </div>
+            <div class="comm-chip">
+              <strong>Concealed Ductable Split</strong>
+              <p>Completely invisible high-static units with sleek architectural linear supply grilles.</p>
+            </div>
+            <div class="comm-chip">
+              <strong>Set-Free Mini &amp; Top-Flow VRF</strong>
+              <p>From 4 HP to 96 HP modular configurations for luxury villas and multi-floor hospitals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. AUTHENTIC SHOWROOM & STORE EXPERIENCE -->
+  <section class="section" id="showroom">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Visit Our Sikar Showroom</span>
+        <h2 class="section-title">Hitachi Brand Shop - K.K. Enterprises</h2>
+        <p class="section-desc">
+          Step into our exclusive brand shop to experience live working demos, compare airflow noise, touch the materials, and get genuine advice from factory-trained Hitachi experts.
+        </p>
+      </div>
+
+      <div class="showroom-grid">
+        <!-- Authentic Storefront Photo Box -->
+        <div class="showroom-photo-card">
+          <img src="assets/storefront.png" alt="Official Hitachi Brand Shop - K.K. Enterprises Front View" class="real-store-img" />
+          <div class="showroom-photo-caption">
+            <h4>K.K. Enterprises • Authorized Hitachi Brand Shop</h4>
+            <p>Ganpati Tower, Mohalla Qureshi / Sikar Roadlines Area, Sikar, Rajasthan</p>
+          </div>
+        </div>
+
+        <!-- Store Details & Practical Info -->
+        <div class="store-detail-box">
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 20px; color: var(--hitachi-red);">
+            Official Sales &amp; Certified Service Centre
+          </h3>
+
+          <div class="info-row">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <strong>Store Showroom Address</strong>
+              <p>Hitachi Brand Shop - K.K. Enterprises<br>Ganpati Tower, Mohalla Qureshi / Near Sikar Roadlines, Sikar, Rajasthan - 332001</p>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon">📞</div>
+            <div class="info-text">
+              <strong>Showroom Hotlines</strong>
+              <p>
+                <a href="tel:+919587111100">+91 95871 11100</a> &nbsp;|&nbsp; 
+                <a href="tel:+919541300000">+91 95413 xxxxx</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon">⏰</div>
+            <div class="info-text">
+              <strong>Operating Hours</strong>
+              <p>Monday to Sunday: <strong>10:00 AM to 8:30 PM</strong> (Open 7 Days a week)</p>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon">🎁</div>
+            <div class="info-text">
+              <strong>In-Store Advantages</strong>
+              <p>• Live Working Demonstration of airHome &amp; FrostWash<br>• Ready In-Stock Inventory for Same-Day Sikar Delivery<br>• Instant 0% EMI Approval (Bajaj Finserv, Credit Cards)<br>• Free Site Survey booking for home &amp; commercial HVAC</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 14px; margin-top: 24px; flex-wrap: wrap;">
+            <a href="https://maps.google.com/?q=K.K.+Enterprises+Hitachi+Brand+Shop+Sikar" 
+               target="_blank" 
+               class="btn btn-primary">
+              🗺️ Open in Google Maps
+            </a>
+            <a href="https://wa.me/919587111100?text=Hi%20K.K.%20Enterprises%2C%20I%20am%20planning%20to%20visit%20your%20Hitachi%20Brand%20Shop%20in%20Sikar." 
+               target="_blank" 
+               class="btn btn-whatsapp">
+              WhatsApp Store Manager
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. SERVICE, INSTALLATION & AMC BOOKING -->
+  <section class="section section-alt" id="service">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Factory Authorized Support</span>
+        <h2 class="section-title">Book AC Installation, Servicing &amp; AMC</h2>
+        <p class="section-desc">
+          Protect your investment with authentic Hitachi certified technicians using 100% genuine copper pipes, vacuum pumps, and specialized jet-cleaning equipment.
+        </p>
+      </div>
+
+      <div class="service-section-wrap">
+        <div class="service-info-col">
+          <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 12px; color: var(--text-primary);">
+            Why Choose K.K. Enterprises Authorized Service?
+          </h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px;">
+            Improper installation by uncertified mechanics causes 80% of AC gas leaks and compressor burnouts in Rajasthan. Our certified team adheres strictly to Hitachi Japanese installation protocols.
+          </p>
+
+          <ul class="service-perks-list">
+            <li><span>✓</span> 100% Pure Virgin Copper Connecting Kit &amp; Heavy Wall Brackets</li>
+            <li><span>✓</span> Mandatory Vacuumization before refrigerant release (Prevents moisture corrosion)</li>
+            <li><span>✓</span> High-Pressure Jet Pump Foam &amp; Coil Wash for maximum airflow</li>
+            <li><span>✓</span> Genuine Hitachi Spare Parts &amp; Factory Refrigerant Top-Up</li>
+            <li><span>✓</span> Annual Maintenance Contracts (AMC) with emergency summer support</li>
+          </ul>
+
+          <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 14px 18px; border-radius: 4px; margin-top: 24px;">
+            <strong style="color: #1e40af; font-size: 0.9rem;">Emergency Breakdown in Sikar?</strong>
+            <p style="color: #1e3a8a; font-size: 0.85rem; margin-top: 2px;">Call our priority service hotline directly at <strong>+91 95871 11100</strong> for prompt same-day dispatch.</p>
+          </div>
+        </div>
+
+        <div class="service-form-col">
+          <form id="serviceBookingForm" class="booking-form">
+            <div class="form-group">
+              <label for="srvName">Your Full Name *</label>
+              <input type="text" id="srvName" class="form-input" placeholder="e.g. Rajesh Sharma" required />
+            </div>
+
+            <div class="form-group">
+              <label for="srvPhone">Mobile / WhatsApp Number *</label>
+              <input type="tel" id="srvPhone" class="form-input" placeholder="e.g. 98290 12345" required />
+            </div>
+
+            <div class="form-group">
+              <label for="srvType">Select Service Required *</label>
+              <select id="srvType" class="form-select" required>
+                <option value="New AC Installation">New AC Installation (Split / Window / Cassette)</option>
+                <option value="Jet-Pump Deep Servicing">Jet-Pump Foam &amp; Deep Chemical Coil Wash</option>
+                <option value="Refrigerant Gas Refill">Gas Leak Detection &amp; Eco R32 Top-Up</option>
+                <option value="AC Uninstallation & Shifting">AC Uninstallation &amp; Re-installation / Shifting</option>
+                <option value="Annual Maintenance Contract (AMC)">Annual Maintenance Contract (AMC) Package</option>
+                <option value="Washing Machine / Refrigerator Repair">Washing Machine or Refrigerator Service</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="srvDate">Preferred Date for Technician Visit</label>
+              <input type="date" id="srvDate" class="form-input" />
+            </div>
+
+            <div class="form-group">
+              <label for="srvNotes">Address in Sikar &amp; Any Issue Details</label>
+              <textarea id="srvNotes" class="form-textarea" placeholder="Enter your area (e.g. Piprali Road, Nawalgarh Road, Ganpati Tower area) and any symptoms like low cooling..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="padding: 12px; font-size: 1rem;">
+              Confirm Service Booking via WhatsApp →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CUSTOMER REVIEWS & TESTIMONIALS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Local Sikar Trust</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-desc">Real experiences from homeowners, doctors, and business owners who bought from K.K. Enterprises.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "We installed two 1.5 Ton airHome 5-Star ACs on our top floor house on Piprali Road. Even in 48°C June heat, the room cools within 7 minutes. K.K. Enterprises delivered and installed on the exact same day."
+          </p>
+          <div class="reviewer-meta">
+            <strong>Dr. M. K. Choudhary</strong>
+            <span>Piprali Road, Sikar</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "For our garment showroom near Ganpati Tower, we bought 3.0 Ton Hitachi Round Flow Cassettes. The 360-degree airflow cools every corner uniformly and looks very premium in our false ceiling. Best authorized dealer in Sikar!"
+          </p>
+          <div class="reviewer-meta">
+            <strong>Suresh Agarwal</strong>
+            <span>Retail Store Owner, Sikar</span>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "Bought a Hitachi Kaze Plus Window AC for my mother's bedroom and a 8.0 kg Front Load washing machine. Got instant 0% Bajaj EMI with zero documentation hassle. Genuine showroom and courteous staff."
+          </p>
+          <div class="reviewer-meta">
+            <strong>Imran Qureshi</strong>
+            <span>Mohalla Qureshi, Sikar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FREQUENTLY ASKED QUESTIONS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faqs-wrap">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Why should I choose Hitachi airHome with 100% Inner Grooved Copper?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Inner grooved copper tubes increase the internal surface area by 3x, speeding up heat transfer and withstanding high refrigerant pressure. Unlike aluminum coils which suffer from pitting corrosion in dusty environments, 100% copper condensers can be easily serviced and repaired, ensuring a 10+ year lifespan.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is the difference between 3-Star and 5-Star Inverter ACs?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            A 5-Star Hitachi Inverter AC (such as the airHome 400 or 600) features an ISEER rating above 5.0, consuming roughly 25% to 30% less electricity than a 3-Star unit. If your AC runs more than 6 hours per day during the summer, the electricity savings will recover the price difference within 2 to 3 seasons.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How does Hitachi FrostWash technology work?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            FrostWash freezes moisture from the air onto the cooling coil to trap dust particles, mold, and bacteria. It then melts rapidly, flushing the debris out through the drain pipe. This maintains peak cooling capacity and ensures fresh, hygienic indoor air.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you offer delivery and installation outside Sikar city?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Yes! K.K. Enterprises services all surrounding tehsils and towns including Laxmangarh, Dhod, Danta Ramgarh, Fatehpur, Nawalgarh, and Ringas. Contact our showroom hotline for dispatch timelines.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="brand-hitachi" style="color: #ffffff;">HITACHI</div>
+          <h4 style="color: #e60012; margin-bottom: 8px;">K.K. Enterprises</h4>
+          <p class="footer-desc">
+            Official Authorized Hitachi Brand Shop and Dealer in Sikar, Rajasthan. Specializing in Inverter Split ACs, Kaze Plus Window ACs, VRF Multi-Zone Air Conditioning, Washing Machines, and Home Inverters.
+          </p>
+          <div style="display: flex; gap: 10px;">
+            <span class="copper-badge">100% Copper Partner</span>
+            <span class="product-badge">Authorized Sales &amp; Service</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cooling Range</h4>
+          <ul class="footer-links">
+            <li><a href="#catalog" onclick="setCategory('split_ac')">airHome Inverter Split ACs</a></li>
+            <li><a href="#catalog" onclick="setCategory('split_ac')">5-Star &amp; 3-Star Split ACs</a></li>
+            <li><a href="#catalog" onclick="setCategory('window_ac')">Hitachi Kaze Plus Window ACs</a></li>
+            <li><a href="#commercial">4-Way Round Flow Cassette ACs</a></li>
+            <li><a href="#commercial">Set-Free Commercial VRF Systems</a></li>
+            <li><a href="#commercial">Central Concealed Ductable ACs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Appliances &amp; Tools</h4>
+          <ul class="footer-links">
+            <li><a href="#catalog" onclick="setCategory('washing_machines')">Front Load Inverter Washers</a></li>
+            <li><a href="#catalog" onclick="setCategory('washing_machines')">Top Load &amp; Semi-Auto Washers</a></li>
+            <li><a href="#catalog" onclick="setCategory('appliances')">Hitachi French Door Refrigerators</a></li>
+            <li><a href="#catalog" onclick="setCategory('appliances')">Home Inverters &amp; Tubular Batteries</a></li>
+            <li><a href="#calculator">AC Room Size Calculator</a></li>
+            <li><a href="#savings">Electricity Savings Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Showroom Contact</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <div>Ganpati Tower, Mohalla Qureshi / Sikar Roadlines Area, Sikar, Rajasthan - 332001</div>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <div>
+              <a href="tel:+919587111100" style="color: #ffffff; font-weight: bold;">+91 95871 11100</a><br>
+              <a href="tel:+919541300000">+91 95413 xxxxx</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <span>⏰</span>
+            <div>Mon - Sun: 10:00 AM - 8:30 PM</div>
+          </div>
+          <div style="margin-top: 14px;">
+            <a href="https://wa.me/919587111100" target="_blank" class="btn btn-whatsapp-sm" style="padding: 8px 16px;">
+              💬 Direct WhatsApp Chat
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Hitachi Brand Shop - K.K. Enterprises. All Rights Reserved. Authorized Hitachi Dealer Sikar.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#hero">Back to Top ↑</a>
+          <a href="#showroom">Store Directions</a>
+          <a href="#service">Book Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 13. FLOATING ACTION BUTTONS -->
+  <div class="floating-actions-bar">
+    <a href="https://wa.me/919587111100?text=Hello%20Hitachi%20Brand%20Shop%20K.K.%20Enterprises%2C%20I%20am%20visiting%20your%20website%20and%20need%20price%20and%20availability%20information." 
+       target="_blank" 
+       class="fab-btn fab-wa" 
+       title="Chat on WhatsApp">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.072-1.892-.472-1.396-.603-2.316-1.956-2.388-2.052-.072-.096-.582-.774-.582-1.477 0-.702.367-1.047.502-1.191.134-.144.293-.18.39-.18.096 0 .193.001.278.006.089.005.207-.034.323.245.12.289.41 1.002.447 1.075.036.072.06.156.012.252-.048.096-.072.156-.144.24-.072.084-.15.187-.215.252-.072.072-.147.15-.063.294.084.144.374.618.803 1.001.552.493 1.018.646 1.162.718.144.072.228.06.312-.036.084-.096.36-419.456-.563.096-.144.192-.12.324-.072.132.048.837.395.981.467.144.072.24.108.276.168.036.06.036.348-.108.753z"/></svg>
+    </a>
+    <a href="tel:+919587111100" class="fab-btn fab-phone" title="Call Showroom Hotline">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    </a>
+  </div>
+
+  <!-- 14. BOTTOM COMPARE DRAWER -->
+  <div class="compare-drawer" id="compareDrawer">
+    <div class="compare-drawer-content">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="color: #ffffff; font-weight: 700; font-size: 0.95rem;">Comparing Models:</span>
+        <div class="compare-thumbs-row" id="compareThumbnails">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+      <div class="compare-drawer-actions">
+        <button class="btn-clear-compare" onclick="clearCompareList()">Clear All</button>
+        <button class="btn btn-primary" onclick="openCompareModal()">
+          Compare Side-by-Side (<span id="compareCount">0/3</span>) →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15. PRODUCT SPECIFICATIONS MODAL -->
+  <div class="modal-backdrop" id="productModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeProductModal()" aria-label="Close modal">×</button>
+      <div id="productModalContent">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 16. SIDE-BY-SIDE COMPARISON MODAL -->
+  <div class="modal-backdrop" id="compareModal">
+    <div class="modal-card modal-card-lg">
+      <button class="modal-close-btn" onclick="closeCompareModal()" aria-label="Close modal">×</button>
+      <div class="compare-modal-content">
+        <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary);">
+          Side-by-Side Model Comparison
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 4px;">
+          Compare tonnage, cooling capacity, power consumption, condenser material, and pricing.
+        </p>
+        <div id="compareTableWrap" style="overflow-x: auto;">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 17. INSTANT QUOTE / SITE SURVEY MODAL -->
+  <div class="modal-backdrop" id="quoteModal">
+    <div class="modal-card" style="max-width: 540px;">
+      <button class="modal-close-btn" onclick="closeQuoteModal()" aria-label="Close modal">×</button>
+      <div style="padding: 36px;">
+        <span class="section-eyebrow">Instant Quote &amp; Consultation</span>
+        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 6px;">Request Showroom Price Quote</h3>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 24px;">
+          Fill in your details to receive the official quotation with cashback, 0% EMI options, and delivery timeline.
+        </p>
+
+        <form id="quoteForm" style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="form-group">
+            <label for="quoteName">Full Name *</label>
+            <input type="text" id="quoteName" class="form-input" placeholder="e.g. Vikas Shekhawat" required />
+          </div>
+
+          <div class="form-group">
+            <label for="quotePhone">WhatsApp Number *</label>
+            <input type="tel" id="quotePhone" class="form-input" placeholder="e.g. 98290 xxxxx" required />
+          </div>
+
+          <div class="form-group">
+            <label for="quoteAddress">Your Location in Sikar / Tehsil</label>
+            <input type="text" id="quoteAddress" class="form-input" placeholder="e.g. Fatehpur Road, Sikar" />
+          </div>
+
+          <div class="form-group">
+            <label for="quoteProduct">Model or Appliance of Interest</label>
+            <input type="text" id="quoteProduct" class="form-input" placeholder="e.g. airHome 400 1.5T 5-Star / Kaze Plus / VRF" />
+          </div>
+
+  <!-- 18. SLIDE-OVER SHOPPING CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCartDrawer()"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <h3>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+        Your Showroom Cart (<span id="cartDrawerCount">0</span>)
+      </h3>
+      <button class="cart-close-btn" onclick="toggleCartDrawer()" aria-label="Close cart">×</button>
+    </div>
+
+    <div class="cart-drawer-body">
+      <!-- Empty State -->
+      <div class="cart-empty-state" id="cartEmptyState">
+        <div class="cart-empty-icon">🛒</div>
+        <h4>Your Cart is Empty</h4>
+        <p>Explore our Hitachi Split ACs, Window ACs, Washing Machines, and Home Inverters with 0% EMI.</p>
+        <button class="btn btn-primary" onclick="toggleCartDrawer(); document.getElementById('catalog').scrollIntoView({behavior: 'smooth'});">
+          Browse Catalog Models
+        </button>
+      </div>
+
+      <!-- Items List -->
+      <div id="cartItemsList" style="display: none; display: flex; flex-direction: column; gap: 12px;">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer" id="cartDrawerFooter" style="display: none;">
+      <!-- Coupon Box -->
+      <div class="cart-coupon-box">
+        <input type="text" id="cartCouponInput" class="cart-coupon-input" placeholder="Promo Code (e.g. HITACHI5000)" />
+        <button class="cart-coupon-btn" onclick="applyCouponCode()">Apply</button>
+      </div>
+      <div id="appliedCouponBadge" style="display: none;" class="cart-coupon-badge">
+        <span id="couponText">Discount Applied</span>
+        <button onclick="removeCouponCode()" style="background: transparent; border: none; color: #16a34a; font-weight: 800; cursor: pointer;">✕</button>
+      </div>
+
+      <!-- Price Breakdown -->
+      <div class="cart-breakdown">
+        <div class="breakdown-row">
+          <span>Catalog Subtotal</span>
+          <strong id="cartSubtotal">₹0</strong>
+        </div>
+        <div class="breakdown-row highlight-row" id="cartDiscountRow" style="display: none;">
+          <span>Instant Promo Discount</span>
+          <strong id="cartDiscount">-₹0</strong>
+        </div>
+        <div class="breakdown-row">
+          <span>GST (18% Included)</span>
+          <span id="cartGstBreakdown">₹0</span>
+        </div>
+        <div class="breakdown-row highlight-row">
+          <span>Delivery &amp; Standard Installation (Sikar)</span>
+          <span>FREE PROMO</span>
+        </div>
+        <div class="breakdown-row total-row">
+          <span>Grand Total</span>
+          <strong id="cartGrandTotal">₹0</strong>
+        </div>
+      </div>
+
+      <button class="cart-checkout-btn" id="proceedCheckoutBtn" onclick="openCheckoutModal()">
+        Proceed to Secure Checkout →
+      </button>
+
+      <div class="cart-assurance-pill">
+        🛡️ 100% Genuine Box • Official Hitachi Warranty • Sikar Local Support
+      </div>
+    </div>
+  </aside>
+
+  <!-- 19. ADVANCED MULTI-STEP CHECKOUT MODAL -->
+  <div class="modal-backdrop" id="checkoutModal">
+    <div class="modal-card checkout-modal-card">
+      <div class="checkout-header">
+        <h3>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          Secure Checkout &amp; Order Booking
+        </h3>
+        <button class="modal-close-btn" onclick="closeCheckoutModal()" aria-label="Close checkout">×</button>
+      </div>
+
+      <div class="checkout-steps-nav">
+        <div class="step-indicator active" id="step1Indicator">
+          <span class="step-num">1</span>
+          <span>Delivery &amp; Customer Details</span>
+        </div>
+        <span class="step-sep">➔</span>
+        <div class="step-indicator" id="step2Indicator">
+          <span class="step-num">2</span>
+          <span>Payment Gateway &amp; Confirmation</span>
+        </div>
+      </div>
+
+      <div class="checkout-body">
+        <form id="checkoutForm" onsubmit="handleCheckoutSubmit(event)">
+          <!-- STEP 1: CUSTOMER & DELIVERY INFO -->
+          <div id="checkoutStep1">
+            <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">
+              Delivery Address &amp; Contact Information
+            </h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+              <div class="form-group">
+                <label for="custName">Full Name *</label>
+                <input type="text" id="custName" class="form-input" placeholder="e.g. Ramesh Chandra Sharma" required />
+              </div>
+              <div class="form-group">
+                <label for="custPhone">10-Digit Mobile Number *</label>
+                <input type="tel" id="custPhone" class="form-input" placeholder="e.g. 9587111100" pattern="[0-9]{10}" maxlength="10" required />
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px; margin-bottom: 16px;">
+              <div class="form-group">
+                <label for="custEmail">Email Address (for GST Invoice)</label>
+                <input type="email" id="custEmail" class="form-input" placeholder="e.g. ramesh@gmail.com" />
+              </div>
+              <div class="form-group">
+                <label for="custGstin">GSTIN (Optional for Business ITC)</label>
+                <input type="text" id="custGstin" class="form-input" placeholder="e.g. 08AAAAA0000A1Z5" />
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label for="custAddress">Complete Street Address / House / Flat No. *</label>
+              <input type="text" id="custAddress" class="form-input" placeholder="e.g. Plot 42, Near Ganpati Tower, Sikar" required />
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+              <div class="form-group">
+                <label for="custLandmark">Landmark</label>
+                <input type="text" id="custLandmark" class="form-input" placeholder="e.g. Opposite Post Office" />
+              </div>
+              <div class="form-group">
+                <label for="custCity">City / Tehsil *</label>
+                <input type="text" id="custCity" class="form-input" value="Sikar" required />
+              </div>
+              <div class="form-group">
+                <label for="custPincode">PIN Code *</label>
+                <input type="text" id="custPincode" class="form-input" value="332001" maxlength="6" required />
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 24px;">
+              <label for="custDeliverySlot">Preferred Delivery &amp; Installation Slot</label>
+              <select id="custDeliverySlot" class="form-select">
+                <option value="Express Same-Day (Within 12 Hours in Sikar)">Express Same-Day Delivery &amp; Installation</option>
+                <option value="Tomorrow Morning (9:00 AM - 1:00 PM)">Tomorrow Morning (9:00 AM - 1:00 PM)</option>
+                <option value="Tomorrow Evening (4:00 PM - 8:00 PM)">Tomorrow Evening (4:00 PM - 8:00 PM)</option>
+                <option value="Weekend Slot (Saturday/Sunday)">Upcoming Weekend Slot</option>
+              </select>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end;">
+              <button type="button" class="btn btn-primary" onclick="goToCheckoutStep2()" style="padding: 12px 28px; font-size: 0.95rem;">
+                Continue to Payment Options →
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: PAYMENT GATEWAY OPTIONS -->
+          <div id="checkoutStep2" style="display: none;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin: 0;">
+                Select Payment Method
+              </h4>
+              <button type="button" class="btn-clear-compare" onclick="goToCheckoutStep1()" style="color: var(--hitachi-red); font-weight: 700;">
+                ← Edit Delivery Info
+              </button>
+            </div>
+
+            <div class="payment-tabs-bar">
+              <!-- UPI & QR Code -->
+              <label class="pay-tab active" onclick="selectPaymentMethod('UPI_QR')">
+                <input type="radio" name="payMethod" value="UPI_QR" checked />
+                <span>📱 Instant UPI &amp; Dynamic QR Code (GPay, PhonePe, Paytm)</span>
+                <span class="pay-tab-badge">Instant Verification</span>
+              </label>
+
+              <!-- Credit / Debit Cards -->
+              <label class="pay-tab" onclick="selectPaymentMethod('CARD')">
+                <input type="radio" name="payMethod" value="CARD" />
+                <span>💳 Credit / Debit Cards (Visa, Mastercard, RuPay)</span>
+                <span class="pay-tab-badge">3D Secure</span>
+              </label>
+
+              <!-- Net Banking -->
+              <label class="pay-tab" onclick="selectPaymentMethod('NETBANKING')">
+                <input type="radio" name="payMethod" value="NETBANKING" />
+                <span>🏦 Internet Banking (All Major Indian Banks)</span>
+              </label>
+
+              <!-- 0% EMI -->
+              <label class="pay-tab" onclick="selectPaymentMethod('EMI')">
+                <input type="radio" name="payMethod" value="EMI" />
+                <span>📑 0% Interest No-Cost EMI (Bajaj Finserv &amp; HDFC / ICICI)</span>
+                <span class="pay-tab-badge">0% Interest</span>
+              </label>
+
+              <!-- Cash on Delivery -->
+              <label class="pay-tab" onclick="selectPaymentMethod('COD')">
+                <input type="radio" name="payMethod" value="COD" />
+                <span>💵 Pay on Delivery &amp; Installation (Cash / Card at Doorstep)</span>
+              </label>
+            </div>
+
+            <!-- TAB DETAILS CONTAINER -->
+            <!-- 1. UPI Section -->
+            <div id="sectionPayUpi" class="upi-qr-wrapper">
+              <div class="qr-timer-text">⚡ QR Code Active - Scan to Pay <span id="qrTimer">04:59</span></div>
+              <div class="upi-qr-box">
+                <img id="dynamicQrImage" src="assets/split_ac_airhome.jpg" alt="Scan QR Code to Pay" />
+              </div>
+              <div class="upi-apps-row">
+                <span class="upi-app-pill">Google Pay</span>
+                <span class="upi-app-pill">PhonePe</span>
+                <span class="upi-app-pill">Paytm</span>
+                <span class="upi-app-pill">BHIM UPI</span>
+              </div>
+              <div class="upi-id-copy-row">
+                <span>Official VPA: <strong>hitachisikar@icici</strong></span>
+                <button type="button" class="btn-clear-compare" onclick="copyUpiId()" style="color: var(--hitachi-red); font-weight: bold;">Copy</button>
+              </div>
+              <div class="form-group" style="max-width: 320px; margin: 0 auto;">
+                <label for="upiUtrNumber" style="font-size: 0.78rem;">UPI Reference / UTR Number (Optional)</label>
+                <input type="text" id="upiUtrNumber" class="form-input" placeholder="e.g. 423456789012" maxlength="16" />
+              </div>
+            </div>
+
+            <!-- 2. Card Section -->
+            <div id="sectionPayCard" class="card-input-grid" style="display: none;">
+              <div class="form-group" style="grid-column: 1 / -1;">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" class="form-input" placeholder="4532 •••• •••• 8921" maxlength="19" oninput="formatCardNumber(this)" />
+              </div>
+              <div class="form-group" style="grid-column: 1 / -1;">
+                <label for="cardName">Cardholder Name</label>
+                <input type="text" id="cardName" class="form-input" placeholder="Name on Card" />
+              </div>
+              <div class="form-group">
+                <label for="cardExpiry">Expiry Date (MM/YY)</label>
+                <input type="text" id="cardExpiry" class="form-input" placeholder="MM/YY" maxlength="5" />
+              </div>
+              <div class="form-group">
+                <label for="cardCvv">CVV Code</label>
+                <input type="password" id="cardCvv" class="form-input" placeholder="•••" maxlength="4" />
+              </div>
+              <div style="grid-column: 1 / -1; font-size: 0.76rem; color: #047857;">
+                🔒 256-Bit Bank Grade Encryption • Simulated 3D Secure Verification
+              </div>
+            </div>
+
+            <!-- 3. Net Banking Section -->
+            <div id="sectionPayNetBanking" style="display: none; background: #f8fafc; padding: 20px; border-radius: var(--radius-md); margin-top: 14px;">
+              <div class="form-group">
+                <label for="netbankBank">Choose Your Bank</label>
+                <select id="netbankBank" class="form-select">
+                  <option value="SBI">State Bank of India (SBI)</option>
+                  <option value="HDFC">HDFC Bank</option>
+                  <option value="ICICI">ICICI Bank</option>
+                  <option value="AXIS">Axis Bank</option>
+                  <option value="PNB">Punjab National Bank (PNB)</option>
+                  <option value="BOB">Bank of Baroda</option>
+                  <option value="KOTAK">Kotak Mahindra Bank</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- 4. EMI Section -->
+            <div id="sectionPayEmi" class="emi-options-box" style="display: none;">
+              <div style="font-size: 0.88rem; font-weight: 700; margin-bottom: 10px; color: var(--text-primary);">
+                0% Interest No-Cost EMI Plans (Hitachi Brand Shop Partnership)
+              </div>
+              <table class="emi-table">
+                <thead>
+                  <tr>
+                    <th>Tenure</th>
+                    <th>Monthly EMI</th>
+                    <th>Interest</th>
+                    <th>Select</th>
+                  </tr>
+                </thead>
+                <tbody id="emiTableBody">
+                  <!-- Dynamically populated by app.js -->
+                </tbody>
+              </table>
+              <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 10px;">
+                * Available on Bajaj Finserv EMI Card, HDFC Bank, ICICI Bank &amp; SBI Credit Cards. Document verification at doorstep.
+              </p>
+            </div>
+
+            <!-- 5. COD Section -->
+            <div id="sectionPayCod" style="display: none; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 20px; border-radius: var(--radius-md); margin-top: 14px;">
+              <strong style="color: #15803d; display: block; margin-bottom: 6px;">
+                ✓ Cash on Delivery / Pay on Installation Verified
+              </strong>
+              <p style="font-size: 0.85rem; color: #166534; line-height: 1.4; margin: 0;">
+                You can pay using Cash, UPI QR code, or Card swipe directly to the certified Hitachi installation team when your AC arrives at your address in Sikar.
+              </p>
+            </div>
+
+            <!-- Order Total Recap & Action -->
+            <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border-light); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+              <div>
+                <span style="font-size: 0.82rem; color: var(--text-muted); display: block;">Payable Amount:</span>
+                <strong id="checkoutTotalAmount" style="font-size: 1.4rem; color: var(--text-primary); font-family: var(--font-display);">₹0</strong>
+              </div>
+              <button type="submit" class="btn btn-primary" id="btnPlaceOrder" style="padding: 14px 32px; font-size: 1rem;">
+                Confirm Order &amp; Book Now →
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 20. ORDER CONFIRMATION / SUCCESS MODAL -->
+  <div class="modal-backdrop" id="orderSuccessModal">
+    <div class="modal-card order-success-card">
+      <div class="success-check-circle">✓</div>
+      <span class="section-eyebrow" style="color: #16a34a;">Order Confirmed &amp; Dispatched for Scheduling</span>
+      <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary); margin: 6px 0;">
+        Thank You for Your Order!
+      </h2>
+      <p style="color: var(--text-secondary); font-size: 0.92rem; max-width: 480px; margin: 0 auto 16px;">
+        Your order has been officially registered with <strong>Hitachi Brand Shop - K.K. Enterprises</strong>, Sikar. Our dispatch manager is preparing your unit.
+      </p>
+
+      <div class="order-id-display">
+        Official Order ID: <span id="successOrderId">HKK-2026-XXXX</span>
+      </div>
+
+      <div id="successOrderDetails" style="background: #f8fafc; border-radius: var(--radius-md); padding: 18px; text-align: left; font-size: 0.86rem; margin-bottom: 24px; border: 1px solid var(--border-light);">
+        <!-- Injected dynamically by app.js -->
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+        <button class="btn btn-primary" onclick="printOfficialInvoice()">
+          📄 Print / Download GST Tax Invoice
+        </button>
+        <button class="btn btn-whatsapp" id="btnSuccessWhatsApp">
+          💬 Send Copy to Showroom Hotline
+        </button>
+        <button class="btn btn-outline" onclick="closeSuccessModalAndTrack()">
+          🔍 Track Order Status
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 21. LIVE ORDER TRACKING MODAL -->
+  <div class="modal-backdrop" id="trackOrderModal">
+    <div class="modal-card order-tracking-card">
+      <div class="checkout-header">
+        <h3>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          Track Your Hitachi Showroom Order
+        </h3>
+        <button class="modal-close-btn" onclick="closeTrackModal()" aria-label="Close tracker">×</button>
+      </div>
+      <div style="padding: 28px;">
+        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+          <input type="text" id="trackInputId" class="form-input" placeholder="Enter Order ID (e.g. HKK-2026-4821)" style="text-transform: uppercase;" />
+          <button class="btn btn-primary" onclick="lookupOrderTracking()" style="padding: 10px 20px; white-space: nowrap;">
+            Track Status
+          </button>
+        </div>
+
+        <div id="trackingResultArea" style="display: none;">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 22. PRINTABLE OFFICIAL GST TAX INVOICE (Hidden until print or view) -->
+  <div class="modal-backdrop" id="invoiceModal">
+    <div class="modal-card modal-card-lg">
+      <div style="padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-light);">
+        <h3 style="font-size: 1.2rem; font-weight: 800;">GST Tax Invoice &amp; Warranty Certificate</h3>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn btn-primary" onclick="window.print()">🖨️ Print Invoice</button>
+          <button class="modal-close-btn" onclick="closeInvoiceModal()" style="position: static;">×</button>
+        </div>
+      </div>
+
+      <div id="printableInvoiceArea" class="invoice-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

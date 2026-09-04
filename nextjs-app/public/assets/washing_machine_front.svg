@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wmBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="drumGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="40%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="wmShadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="600" height="450" rx="16" fill="#f8fafc"/>
+  <circle cx="300" cy="225" r="175" fill="#f1f5f9"/>
+
+  <!-- Washing Machine Outer Body -->
+  <g filter="url(#wmShadow)">
+    <rect x="180" y="60" width="240" height="320" rx="16" fill="url(#wmBody)" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="195" y="375" width="210" height="8" rx="3" fill="#94a3b8"/>
+  </g>
+
+  <!-- Top Control Panel Area -->
+  <rect x="190" y="70" width="220" height="65" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Left: Detergent Dispenser Drawer -->
+  <rect x="198" y="78" width="55" height="48" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="225" y="95" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="9" fill="#e60012" text-anchor="middle">HITACHI</text>
+  <text x="225" y="112" font-family="sans-serif" font-size="7" fill="#64748b" text-anchor="middle">8.0 KG</text>
+
+  <!-- Center: Jog Dial Program Selector Knob -->
+  <circle cx="285" cy="102" r="18" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="285" cy="102" r="13" fill="#ffffff"/>
+  <line x1="285" y1="89" x2="285" y2="95" stroke="#e60012" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Right: Digital Touch Display Panel -->
+  <rect x="325" y="78" width="78" height="48" rx="4" fill="#0f172a"/>
+  <text x="364" y="98" font-family="'Courier New', monospace" font-weight="bold" font-size="14" fill="#38bdf8" text-anchor="middle">0:45</text>
+  <text x="364" y="114" font-family="sans-serif" font-size="7" fill="#22c55e" text-anchor="middle">STEAM WASH</text>
+
+  <!-- Giant Porthole Door -->
+  <circle cx="300" cy="245" r="92" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2"/>
+  <!-- Chrome Outer Ring -->
+  <circle cx="300" cy="245" r="82" fill="#475569"/>
+  <!-- Dark Glass Porthole -->
+  <circle cx="300" cy="245" r="70" fill="url(#drumGlass)"/>
+  <!-- Inside stainless drum pattern & water swirl reflection -->
+  <circle cx="300" cy="245" r="50" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+  <path d="M 270 240 Q 300 220 330 245" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.3" stroke-linecap="round"/>
+
+  <!-- Door Handle -->
+  <path d="M 370 230 Q 380 245 370 260" stroke="#cbd5e1" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+  <!-- Inverter Motor Badge -->
+  <rect x="255" y="348" width="90" height="18" rx="3" fill="#0f172a"/>
+  <text x="300" y="360" font-family="sans-serif" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">INVERTER MOTOR</text>
+</svg>

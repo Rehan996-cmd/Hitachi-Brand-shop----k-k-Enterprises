@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="invBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="invShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="600" height="450" rx="16" fill="#f8fafc"/>
+
+  <!-- 1. Home Inverter Unit (Top) -->
+  <g filter="url(#invShadow)" transform="translate(130, 60)">
+    <rect width="340" height="135" rx="10" fill="url(#invBody)" stroke="#334155" stroke-width="1.5"/>
+    <!-- Brand Label -->
+    <text x="40" y="45" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="16" fill="#e60012">HITACHI / K.K.</text>
+    <text x="40" y="62" font-family="sans-serif" font-weight="bold" font-size="10" fill="#94a3b8">HEAVY-DUTY SINE WAVE INVERTER</text>
+
+    <!-- LCD Display -->
+    <rect x="220" y="30" width="95" height="55" rx="6" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+    <text x="267" y="55" font-family="'Courier New', monospace" font-size="16" font-weight="bold" fill="#22c55e" text-anchor="middle">230 V</text>
+    <text x="267" y="73" font-family="'Courier New', monospace" font-size="10" fill="#38bdf8" text-anchor="middle">BATTERY 100%</text>
+
+    <!-- Air Ventilation Slits -->
+    <g stroke="#334155" stroke-width="2">
+      <line x1="40" y1="95" x2="160" y2="95"/>
+      <line x1="40" y1="105" x2="160" y2="105"/>
+      <line x1="40" y1="115" x2="160" y2="115"/>
+    </g>
+    <!-- Status LEDs -->
+    <circle cx="235" cy="105" r="4" fill="#22c55e"/>
+    <circle cx="260" cy="105" r="4" fill="#38bdf8"/>
+    <circle cx="285" cy="105" r="4" fill="#f59e0b"/>
+  </g>
+
+  <!-- 2. Heavy Tubular Battery (Bottom) -->
+  <g filter="url(#invShadow)" transform="translate(110, 230)">
+    <rect width="380" height="160" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <!-- Top Terminal Cover -->
+    <rect x="20" y="-15" width="340" height="20" rx="4" fill="#0f172a"/>
+    <!-- Battery Level Float Indicators -->
+    
+      <rect x="55" y="-30" width="16" height="20" rx="2" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+      <circle cx="63" cy="-20" r="4" fill="#e60012"/>
+    
+      <rect x="105" y="-30" width="16" height="20" rx="2" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+      <circle cx="113" cy="-20" r="4" fill="#e60012"/>
+    
+      <rect x="155" y="-30" width="16" height="20" rx="2" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+      <circle cx="163" cy="-20" r="4" fill="#e60012"/>
+    
+      <rect x="205" y="-30" width="16" height="20" rx="2" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+      <circle cx="213" cy="-20" r="4" fill="#e60012"/>
+    
+      <rect x="255" y="-30" width="16" height="20" rx="2" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+      <circle cx="263" cy="-20" r="4" fill="#e60012"/>
+    
+      <rect x="305" y="-30" width="16" height="20" rx="2" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+      <circle cx="313" cy="-20" r="4" fill="#e60012"/>
+    
+
+    <!-- Battery Specs and Label -->
+    <rect x="40" y="30" width="300" height="100" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="190" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="18" fill="#0f172a" text-anchor="middle">TALL TUBULAR INVERTER BATTERY</text>
+    <text x="190" y="85" font-family="sans-serif" font-weight="bold" font-size="12" fill="#e60012" text-anchor="middle">220 Ah / 12V • 60 MONTHS WARRANTY</text>
+    <text x="190" y="105" font-family="sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Suitable for 1.5T Inverter AC + Fans & Lighting Backup</text>
+  </g>
+
+  <!-- Heavy Connecting Cables -->
+  <path d="M 230 195 C 230 215 180 210 180 230" stroke="#dc2626" stroke-width="6" fill="none"/>
+  <path d="M 370 195 C 370 215 420 210 420 230" stroke="#1e293b" stroke-width="6" fill="none"/>
+</svg>

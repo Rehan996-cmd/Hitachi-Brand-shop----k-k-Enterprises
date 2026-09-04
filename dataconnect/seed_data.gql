@@ -1,0 +1,25 @@
+mutation SeedDatabase @transaction {
+  user_insertMany(data: [
+    { username: "alice", email: "alice@example.com", bio: "Tech enthusiast" },
+    { username: "bob", email: "bob@example.com", bio: "Photographer" },
+    { username: "charlie", email: "charlie@example.com", bio: "Developer" }
+  ])
+  room_insertMany(data: [
+    { name: "General", createdAt_expr: "request.time", description: "Main room" },
+    { name: "Project X", createdAt_expr: "request.time", description: "Secret project" },
+    { name: "Coffee Talk", createdAt_expr: "request.time", description: "Casual chatter" }
+  ])
+  roomSetting_insertMany(data: [
+    { isPrivate: false, themeColor: "blue", maxParticipants: 50, room: { id_expr: "uuidV4()" } },
+    { isPrivate: true, themeColor: "red", maxParticipants: 5, room: { id_expr: "uuidV4()" } }
+  ])
+  member_insertMany(data: [
+    { joinedAt_expr: "request.time", user: { id_expr: "uuidV4()" }, room: { id_expr: "uuidV4()" } },
+    { joinedAt_expr: "request.time", user: { id_expr: "uuidV4()" }, room: { id_expr: "uuidV4()" } }
+  ])
+  message_insertMany(data: [
+    { content: "Hello everyone!", createdAt_expr: "request.time", room: { id_expr: "uuidV4()" }, sender: { id_expr: "uuidV4()" } },
+    { content: "Project X update...", createdAt_expr: "request.time", room: { id_expr: "uuidV4()" }, sender: { id_expr: "uuidV4()" } },
+    { content: "Anyone for coffee?", createdAt_expr: "request.time", room: { id_expr: "uuidV4()" }, sender: { id_expr: "uuidV4()" } }
+  ])
+}

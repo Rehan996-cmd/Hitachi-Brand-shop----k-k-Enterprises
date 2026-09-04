@@ -1,0 +1,71 @@
+[
+  {
+    "id": "HKK-2026-1059",
+    "orderNumber": 1059,
+    "createdAt": "2026-09-04T11:07:29.429Z",
+    "status": "Confirmed",
+    "customer": {
+      "name": "Ramesh Sharma",
+      "phone": "9587111100",
+      "email": "ramesh.sharma@example.com",
+      "address": "Plot 42, Near Ganpati Tower",
+      "landmark": "Opposite Showroom",
+      "city": "Sikar",
+      "pincode": "332001",
+      "deliverySlot": "Express Same-Day",
+      "gstin": "08AAAAA1234A1Z5"
+    },
+    "items": [
+      {
+        "id": "airhome_400_5s",
+        "name": "Hitachi airHome 400 Series 1.5 Ton 5-Star Inverter Split AC",
+        "category": "split_ac",
+        "tonnage": "1.5 Ton",
+        "price": 44990,
+        "mrp": 66990,
+        "quantity": 1,
+        "total": 44990,
+        "image": "assets/split_ac_airhome.jpg"
+      }
+    ],
+    "pricing": {
+      "subtotal": 44990,
+      "discount": 5000,
+      "couponCode": "HITACHI5000 (₹5,000 Exclusive Brand Shop Instant Discount)",
+      "baseAmount": 33890,
+      "gstRate": "18% (9% CGST + 9% SGST)",
+      "gstAmount": 6100,
+      "deliveryFee": 0,
+      "installationFee": 0,
+      "grandTotal": 39990
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid - Verified",
+      "transactionRef": "TXN20049429",
+      "verifiedAt": "2026-09-04T11:07:29.429Z"
+    },
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "04:37 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Showroom Processing (K.K. Enterprises, Sikar)",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Dispatched from Ganpati Tower Warehouse",
+        "time": "Pending",
+        "status": "pending"
+      },
+      {
+        "step": "Delivery & Certified Installation",
+        "time": "Express Same-Day",
+        "status": "pending"
+      }
+    ]
+  }
+]

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="towerBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="towerShadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="600" height="450" rx="16" fill="#f8fafc"/>
+  <circle cx="300" cy="225" r="170" fill="#f1f5f9"/>
+
+  <g filter="url(#towerShadow)">
+    <!-- Tower Body -->
+    <rect x="235" y="50" width="130" height="340" rx="14" fill="url(#towerBody)" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="225" y="380" width="150" height="14" rx="4" fill="#334155"/>
+  </g>
+
+  <!-- Top Curved Head & Brand -->
+  <text x="300" y="82" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14" fill="#e60012" text-anchor="middle" letter-spacing="1">HITACHI</text>
+  <text x="300" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-weight="bold" font-size="7.5" fill="#64748b" text-anchor="middle">COMMERCIAL TOWER</text>
+
+  <!-- Upper Blow Air Louvers -->
+  <rect x="250" y="110" width="100" height="110" rx="6" fill="#0f172a"/>
+  <!-- Louver Blades with glowing cyan accent -->
+  <g stroke="#38bdf8" stroke-width="2" opacity="0.9">
+    <line x1="258" y1="125" x2="342" y2="125"/>
+    <line x1="258" y1="140" x2="342" y2="140"/>
+    <line x1="258" y1="155" x2="342" y2="155"/>
+    <line x1="258" y1="170" x2="342" y2="170"/>
+    <line x1="258" y1="185" x2="342" y2="185"/>
+    <line x1="258" y1="200" x2="342" y2="200"/>
+  </g>
+
+  <!-- Central Circular Touch Screen Controller -->
+  <circle cx="300" cy="245" r="22" fill="#0f172a" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="300" y="251" font-family="'Courier New', monospace" font-weight="bold" font-size="15" fill="#38bdf8" text-anchor="middle">20°C</text>
+
+  <!-- Lower Return Air Intake Grille -->
+  <rect x="250" y="280" width="100" height="85" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <g stroke="#94a3b8" stroke-width="1.5">
+    <line x1="258" y1="293" x2="342" y2="293"/><line x1="258" y1="304" x2="342" y2="304"/><line x1="258" y1="315" x2="342" y2="315"/><line x1="258" y1="326" x2="342" y2="326"/><line x1="258" y1="337" x2="342" y2="337"/><line x1="258" y1="348" x2="342" y2="348"/>
+  </g>
+</svg>

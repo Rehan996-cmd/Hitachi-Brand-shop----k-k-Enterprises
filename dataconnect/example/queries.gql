@@ -1,0 +1,124 @@
+# User Operations
+mutation InsertUser($data: User_Data!) @auth(level: USER) {
+  user_insert(data: $data)
+}
+
+mutation UpdateUser($data: User_Data!) @auth(level: USER) {
+  user_update(key: {id_expr: "auth.uid"}, data: $data)
+}
+
+mutation DeleteUser @auth(level: USER) {
+  user_delete(key: {id_expr: "auth.uid"})
+}
+
+query GetUser @auth(level: USER) {
+  user(key: {id_expr: "auth.uid"}) {
+    username email avatarUrl bio
+  }
+}
+
+query ListUsers @auth(level: PUBLIC, insecureReason: "User profiles are public") {
+  users {
+    username bio
+  }
+}
+
+# Room Operations
+mutation InsertRoom($data: Room_Data!) @auth(level: USER) {
+  room_insert(data: $data)
+}
+
+mutation UpdateRoom($id: UUID!, $data: Room_Data!) @auth(level: USER) {
+  room_update(id: $id, data: $data)
+}
+
+mutation DeleteRoom($id: UUID!) @auth(level: USER) {
+  room_delete(id: $id)
+}
+
+query GetRoom($id: UUID!) @auth(level: PUBLIC, insecureReason: "Room details are public") {
+  room(id: $id) {
+    name description createdAt
+  }
+}
+
+query ListRooms @auth(level: PUBLIC, insecureReason: "List of rooms is public") {
+  rooms {
+    name createdAt
+  }
+}
+
+# Message Operations
+mutation SendMessage($data: Message_Data!) @auth(level: USER) {
+  message_insert(data: $data)
+}
+
+mutation UpdateMessage($id: UUID!, $data: Message_Data!) @auth(level: USER) {
+  message_update(id: $id, data: $data)
+}
+
+mutation DeleteMessage($id: UUID!) @auth(level: USER) {
+  message_delete(id: $id)
+}
+
+query GetMessage($id: UUID!) @auth(level: USER) {
+  message(id: $id) {
+    content createdAt sender { username }
+  }
+}
+
+query ListMessages($roomId: UUID!) @auth(level: USER) {
+  messages(where: {roomId: {eq: $roomId}}) {
+    content createdAt sender { username }
+  }
+}
+
+# Member Operations
+mutation JoinRoom($data: Member_Data!) @auth(level: USER) {
+  member_insert(data: $data)
+}
+
+mutation LeaveRoom($id: UUID!) @auth(level: USER) {
+  member_delete(id: $id)
+}
+
+mutation UpdateMember($id: UUID!, $data: Member_Data!) @auth(level: USER) {
+  member_update(id: $id, data: $data)
+}
+
+query GetMember($id: UUID!) @auth(level: USER) {
+  member(id: $id) {
+    joinedAt user { username }
+  }
+}
+
+query ListRoomMembers($roomId: UUID!) @auth(level: USER) {
+  members(where: {roomId: {eq: $roomId}}) {
+    user { username } joinedAt
+  }
+}
+
+# RoomSetting Operations
+mutation CreateRoomSettings($data: RoomSetting_Data!) @auth(level: USER) {
+  roomSetting_insert(data: $data)
+}
+
+mutation UpdateRoomSettings($id: UUID!, $data: RoomSetting_Data!) @auth(level: USER) {
+  roomSetting_update(id: $id, data: $data)
+}
+
+mutation DeleteRoomSettings($id: UUID!) @auth(level: USER) {
+  roomSetting_delete(id: $id)
+}
+
+query GetRoomSettings($roomId: UUID!) @auth(level: USER) {
+  roomSettings(where: {roomId: {eq: $roomId}}) {
+    isPrivate themeColor maxParticipants
+  }
+}
+
+query ListAllSettings @auth(level: USER) {
+  roomSettings {
+    roomId isPrivate
+  }
+}

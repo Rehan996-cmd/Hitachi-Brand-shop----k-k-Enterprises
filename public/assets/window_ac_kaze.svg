@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wacBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="wacGrille" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="50%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="copperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Background Studio Box -->
+  <rect width="600" height="450" rx="16" fill="#f8fafc"/>
+  <circle cx="300" cy="225" r="180" fill="#e2e8f0" opacity="0.4"/>
+
+  <!-- Outer Casing Shadow & Unit Body -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="80" width="460" height="290" rx="12" fill="url(#wacBody)" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="70" y="80" width="460" height="10" rx="4" fill="#e2e8f0"/>
+    <!-- Outer Side Chasis Line -->
+    <line x1="70" y1="360" x2="530" y2="360" stroke="#cbd5e1" stroke-width="1.5"/>
+  </g>
+
+  <!-- Left Side: Cooling Coil Louvers Section -->
+  <rect x="95" y="110" width="265" height="235" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <!-- Louvers -->
+  <g stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round">
+    <line x1="108" y1="130" x2="348" y2="130"/>
+    <line x1="108" y1="148" x2="348" y2="148"/>
+    <line x1="108" y1="166" x2="348" y2="166"/>
+    <line x1="108" y1="184" x2="348" y2="184"/>
+    <line x1="108" y1="202" x2="348" y2="202"/>
+    <line x1="108" y1="220" x2="348" y2="220"/>
+    <line x1="108" y1="238" x2="348" y2="238"/>
+    <line x1="108" y1="256" x2="348" y2="256"/>
+    <line x1="108" y1="274" x2="348" y2="274"/>
+    <line x1="108" y1="292" x2="348" y2="292"/>
+    <line x1="108" y1="310" x2="348" y2="310"/>
+    <line x1="108" y1="328" x2="348" y2="328"/>
+  </g>
+
+  <!-- Right Side: Control & Display Panel -->
+  <rect x="375" y="110" width="135" height="235" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Brand Hitachi Text -->
+  <text x="442" y="138" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="15" fill="#e60012" text-anchor="middle" letter-spacing="1.5">HITACHI</text>
+  <text x="442" y="152" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="9" fill="#64748b" text-anchor="middle">KAZE PLUS</text>
+
+  <!-- Digital Temperature LED Display Panel -->
+  <rect x="390" y="165" width="105" height="58" rx="6" fill="#0f172a"/>
+  <text x="430" y="206" font-family="'Courier New', monospace" font-weight="bold" font-size="34" fill="#38bdf8" text-anchor="middle">21</text>
+  <text x="468" y="188" font-family="'Courier New', monospace" font-weight="bold" font-size="16" fill="#38bdf8">°C</text>
+  <circle cx="405" cy="180" r="3" fill="#22c55e"/>
+  <text x="412" y="183" font-family="sans-serif" font-size="7" fill="#94a3b8">COOL</text>
+  <circle cx="405" cy="202" r="3" fill="#38bdf8"/>
+  <text x="412" y="205" font-family="sans-serif" font-size="7" fill="#94a3b8">AUTO</text>
+
+  <!-- Control Buttons -->
+  <g fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1">
+    <rect x="390" y="235" width="48" height="26" rx="4"/>
+    <rect x="447" y="235" width="48" height="26" rx="4"/>
+    <rect x="390" y="268" width="48" height="26" rx="4"/>
+    <rect x="447" y="268" width="48" height="26" rx="4"/>
+  </g>
+  <!-- Button Labels -->
+  <text x="414" y="252" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">TEMP ▲</text>
+  <text x="471" y="252" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">TEMP ▼</text>
+  <text x="414" y="285" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="middle">MODE</text>
+  <text x="471" y="285" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#e60012" text-anchor="middle">POWER</text>
+
+  <!-- Copper Badge -->
+  <rect x="390" y="306" width="105" height="24" rx="4" fill="url(#copperGrad)"/>
+  <text x="442" y="322" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">100% COPPER</text>
+
+  <!-- Star Rating Badge Overlay -->
+  <g transform="translate(85, 95)">
+    <rect width="64" height="22" rx="4" fill="#e60012"/>
+    <text x="32" y="15" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">★ 3-STAR</text>
+  </g>
+</svg>
