@@ -4,6 +4,8 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+bin/
+tools/
 firebase-debug.log*
 firebase-debug.*.log*
 
