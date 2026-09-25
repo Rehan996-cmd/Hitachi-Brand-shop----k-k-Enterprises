@@ -7,7 +7,9 @@
     "dev": "npm run dev --prefix nextjs-app -- -p 3000",
     "build": "npm run build --prefix nextjs-app",
     "start": "npm run start --prefix nextjs-app -- -p 3000",
-    "server": "node server.js"
+    "server": "node server.js",
+    "deploy:cloudflare": "npx wrangler pages deploy public",
+    "deploy:cloudflare:login": "npx wrangler login"
   },
   "keywords": [
     "coffee-and-toast",
