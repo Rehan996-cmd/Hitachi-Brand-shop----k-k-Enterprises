@@ -1,20 +1,29 @@
 {
-  "name": "hitachi-brand-shop-sikar",
-  "version": "2.0.0",
-  "description": "Official Web Portal for Hitachi Brand Shop - K.K. Enterprises, Sikar, Rajasthan",
+  "name": "coffee-and-toast-cafe",
+  "version": "1.0.0",
+  "description": "Official Website for Coffee & Toast Café - Sikar's Finest Specialty Coffee, Hearth-Baked Toasts & Bites",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "build": "echo 'No build step required for static frontend + Node server'"
+    "dev": "npm run dev --prefix nextjs-app -- -p 3000",
+    "build": "npm run build --prefix nextjs-app",
+    "start": "npm run start --prefix nextjs-app -- -p 3000",
+    "server": "node server.js"
   },
   "keywords": [
-    "hitachi",
-    "air-conditioner",
+    "coffee-and-toast",
+    "cafe",
+    "coffee",
+    "toast",
     "sikar",
-    "appliances",
-    "e-commerce"
+    "rajasthan",
+    "specialty-coffee",
+    "desserts",
+    "beverages",
+    "fast-food"
   ],
-  "author": "K.K. Enterprises",
-  "license": "ISC"
+  "author": "Coffee & Toast Café",
+  "license": "ISC",
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
 }

@@ -1,0 +1,55 @@
+{
+  "name": "Hotel Shivansh - Royal Dining & Luxury Stay",
+  "short_name": "Hotel Shivansh",
+  "description": "Official Web Portal for Hotel Shivansh - 100% Pure Veg Royal Dining, 24x7 In-Room Food Ordering, Table Reservations & AC Deluxe Rooms in Sikar, Rajasthan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080c14",
+  "theme_color": "#080c14",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/hotel_hero.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/hotel_hero.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "hotel", "travel", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Dining Menu",
+      "short_name": "Menu",
+      "description": "Browse Royal Thalis and Multi-Cuisine Food",
+      "url": "/#menu",
+      "icons": [{ "src": "/assets/restaurant_thali.jpg", "sizes": "192x192" }]
+    },
+    {
+      "name": "In-Room Dining",
+      "short_name": "Room Service",
+      "description": "Order food straight to your hotel room",
+      "url": "/#inroom",
+      "icons": [{ "src": "/assets/dish_paneer.jpg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Book a Room",
+      "short_name": "Rooms",
+      "description": "Reserve Deluxe AC Rooms & Suites",
+      "url": "/#rooms",
+      "icons": [{ "src": "/assets/room_deluxe.jpg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Reserve Table",
+      "short_name": "Table",
+      "description": "Book a table at our Royal AC Restaurant",
+      "url": "/#reserve",
+      "icons": [{ "src": "/assets/restaurant_ambiance.jpg", "sizes": "192x192" }]
+    }
+  ]
+}

@@ -1,5 +1,3248 @@
 [
   {
+    "id": "SHV-53282",
+    "orderNumber": 53282,
+    "createdAt": "2026-09-24T08:20:25.829Z",
+    "type": "delivery",
+    "status": "Confirmed - Zomato Rider Dispatched",
+    "customer": {
+      "name": "Sunita Choudhary",
+      "phone": "9414012345",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "Near Piprali Circle, Piprali Road, Sikar",
+      "notes": "Please keep mild spicy for elderly parents"
+    },
+    "items": [
+      {
+        "id": "thali-2",
+        "name": "Authentic Rajasthani Dal Baati Churma Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Royal Platter",
+        "unitPrice": 280,
+        "quantity": 2,
+        "total": 560,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 800,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 800,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 40,
+      "deliveryFee": 0,
+      "grandTotal": 840
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN38025829",
+      "upiId": "9460624455@upi",
+      "upiUrl": "upi://pay?pa=9460624455@upi&pn=Hotel%20Shivansh&am=840&cu=INR&tn=Order%20SHV-53282",
+      "qrDataUrl": "data:image/png;base64,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"
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-763",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "assigned",
+      "statusText": "Zomato Rider Assigned & Heading to Hotel Shivansh for Pickup",
+      "deliveryOtp": "2326",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Sunita Choudhary",
+        "address": "Near Piprali Circle, Piprali Road, Sikar",
+        "phone": "9414012345"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 20,
+      "pickupConfirmedAt": null,
+      "deliveredAt": null
+    },
+    "settlement": {
+      "foodRevenue": 800,
+      "hotelNetEarning": 840,
+      "hotelCommissionSaved": 176,
+      "zomatoLogisticsFee": 40,
+      "riderTripPayout": 35,
+      "riderBonus": 10,
+      "totalRiderEarning": 45,
+      "model": "Win-Win Direct D2C Website + Zomato 3PL Express Logistics"
+    },
+    "timeline": [
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "01:50 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "In Progress",
+        "status": "active"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "En Route to Hotel",
+        "status": "active"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "Pending Handover",
+        "status": "pending"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Pending",
+        "status": "pending"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "Pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-95459",
+    "orderNumber": 95459,
+    "createdAt": "2026-09-24T08:20:25.818Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Dr. Ramesh Sharma",
+      "phone": "9829012345",
+      "orderType": "room",
+      "roomNumber": "Room 204",
+      "tableNumber": null,
+      "address": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 640,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 32,
+      "deliveryFee": 0,
+      "grandTotal": 672
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN38025818",
+      "upiId": "9460624455@upi",
+      "upiUrl": "upi://pay?pa=9460624455@upi&pn=Hotel%20Shivansh&am=672&cu=INR&tn=Order%20SHV-95459",
+      "qrDataUrl": "data:image/png;base64,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"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room Room 204)",
+    "deliveryPartner": null,
+    "settlement": null,
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "01:50 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room Room 204)",
+        "time": "Estimated 20 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-75125",
+    "orderNumber": 75125,
+    "createdAt": "2026-09-24T08:20:25.683Z",
+    "type": "delivery",
+    "status": "Confirmed - Zomato Rider Dispatched",
+    "customer": {
+      "name": "Rajendra Singh",
+      "phone": "9829012345",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "Piprali Road, Sikar",
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 640,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 32,
+      "deliveryFee": 0,
+      "grandTotal": 672
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid (Verified)",
+      "transactionRef": "UPI482910394821",
+      "paidAt": "2026-09-24T08:20:25.690Z",
+      "verifiedAmount": 672
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-154",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "assigned",
+      "statusText": "Zomato Rider Assigned & Heading to Hotel Shivansh for Pickup",
+      "deliveryOtp": "2722",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Rajendra Singh",
+        "address": "Piprali Road, Sikar",
+        "phone": "9829012345"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 20,
+      "pickupConfirmedAt": null,
+      "deliveredAt": null
+    },
+    "settlement": {
+      "foodRevenue": 640,
+      "hotelNetEarning": 672,
+      "hotelCommissionSaved": 141,
+      "zomatoLogisticsFee": 40,
+      "riderTripPayout": 35,
+      "riderBonus": 10,
+      "totalRiderEarning": 45,
+      "model": "Win-Win Direct D2C Website + Zomato 3PL Express Logistics"
+    },
+    "timeline": [
+      {
+        "step": "Payment Verified via UPI (Ref: UPI482910394821)",
+        "time": "01:50 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "01:50 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "In Progress",
+        "status": "active"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "En Route to Hotel",
+        "status": "active"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "Pending Handover",
+        "status": "pending"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Pending",
+        "status": "pending"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "Pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-60775",
+    "orderNumber": 60775,
+    "createdAt": "2026-09-24T08:13:52.409Z",
+    "type": "delivery",
+    "status": "Confirmed - Zomato Rider Dispatched",
+    "customer": {
+      "name": "Sunita Choudhary",
+      "phone": "9414012345",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "Near Piprali Circle, Piprali Road, Sikar",
+      "notes": "Please keep mild spicy for elderly parents"
+    },
+    "items": [
+      {
+        "id": "thali-2",
+        "name": "Authentic Rajasthani Dal Baati Churma Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Royal Platter",
+        "unitPrice": 280,
+        "quantity": 2,
+        "total": 560,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 800,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 800,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 40,
+      "deliveryFee": 0,
+      "grandTotal": 840
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN37632409",
+      "upiId": "9460624455@upi",
+      "upiUrl": "upi://pay?pa=9460624455@upi&pn=Hotel%20Shivansh&am=840&cu=INR&tn=Order%20SHV-60775",
+      "qrDataUrl": "data:image/png;base64,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"
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-774",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "assigned",
+      "statusText": "Zomato Rider Assigned & Heading to Hotel Shivansh for Pickup",
+      "deliveryOtp": "5108",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Sunita Choudhary",
+        "address": "Near Piprali Circle, Piprali Road, Sikar",
+        "phone": "9414012345"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 20,
+      "pickupConfirmedAt": null,
+      "deliveredAt": null
+    },
+    "settlement": {
+      "foodRevenue": 800,
+      "hotelNetEarning": 840,
+      "hotelCommissionSaved": 176,
+      "zomatoLogisticsFee": 40,
+      "riderTripPayout": 35,
+      "riderBonus": 10,
+      "totalRiderEarning": 45,
+      "model": "Win-Win Direct D2C Website + Zomato 3PL Express Logistics"
+    },
+    "timeline": [
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "01:43 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "In Progress",
+        "status": "active"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "En Route to Hotel",
+        "status": "active"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "Pending Handover",
+        "status": "pending"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Pending",
+        "status": "pending"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "Pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-58798",
+    "orderNumber": 58798,
+    "createdAt": "2026-09-24T08:13:52.394Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Dr. Ramesh Sharma",
+      "phone": "9829012345",
+      "orderType": "room",
+      "roomNumber": "Room 204",
+      "tableNumber": null,
+      "address": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 640,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 32,
+      "deliveryFee": 0,
+      "grandTotal": 672
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN37632394",
+      "upiId": "9460624455@upi",
+      "upiUrl": "upi://pay?pa=9460624455@upi&pn=Hotel%20Shivansh&am=672&cu=INR&tn=Order%20SHV-58798",
+      "qrDataUrl": "data:image/png;base64,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"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room Room 204)",
+    "deliveryPartner": null,
+    "settlement": null,
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "01:43 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room Room 204)",
+        "time": "Estimated 20 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-52464",
+    "orderNumber": 52464,
+    "createdAt": "2026-09-24T08:13:52.280Z",
+    "type": "delivery",
+    "status": "Confirmed - Zomato Rider Dispatched",
+    "customer": {
+      "name": "Rajendra Singh",
+      "phone": "9829012345",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "Piprali Road, Sikar",
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 640,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 32,
+      "deliveryFee": 0,
+      "grandTotal": 672
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid (Verified)",
+      "transactionRef": "UPI482910394821",
+      "paidAt": "2026-09-24T08:13:52.286Z",
+      "verifiedAmount": 672
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-957",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "assigned",
+      "statusText": "Zomato Rider Assigned & Heading to Hotel Shivansh for Pickup",
+      "deliveryOtp": "1197",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Rajendra Singh",
+        "address": "Piprali Road, Sikar",
+        "phone": "9829012345"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 20,
+      "pickupConfirmedAt": null,
+      "deliveredAt": null
+    },
+    "settlement": {
+      "foodRevenue": 640,
+      "hotelNetEarning": 672,
+      "hotelCommissionSaved": 141,
+      "zomatoLogisticsFee": 40,
+      "riderTripPayout": 35,
+      "riderBonus": 10,
+      "totalRiderEarning": 45,
+      "model": "Win-Win Direct D2C Website + Zomato 3PL Express Logistics"
+    },
+    "timeline": [
+      {
+        "step": "Payment Verified via UPI (Ref: UPI482910394821)",
+        "time": "01:43 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "01:43 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "In Progress",
+        "status": "active"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "En Route to Hotel",
+        "status": "active"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "Pending Handover",
+        "status": "pending"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Pending",
+        "status": "pending"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "Pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-71659",
+    "orderNumber": 71659,
+    "createdAt": "2026-09-24T08:10:00.447Z",
+    "type": "delivery",
+    "status": "Confirmed - Zomato Rider Dispatched",
+    "customer": {
+      "name": "Sunita Choudhary",
+      "phone": "9414012345",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "Near Piprali Circle, Piprali Road, Sikar",
+      "notes": "Please keep mild spicy for elderly parents"
+    },
+    "items": [
+      {
+        "id": "thali-2",
+        "name": "Authentic Rajasthani Dal Baati Churma Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Royal Platter",
+        "unitPrice": 280,
+        "quantity": 2,
+        "total": 560,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 800,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 800,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 40,
+      "deliveryFee": 0,
+      "grandTotal": 840
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN37400447",
+      "upiId": "9460624455@upi",
+      "upiUrl": "upi://pay?pa=9460624455@upi&pn=Hotel%20Shivansh&am=840&cu=INR&tn=Order%20SHV-71659",
+      "qrDataUrl": "data:image/png;base64,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"
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-164",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "assigned",
+      "statusText": "Zomato Rider Assigned & Heading to Hotel Shivansh for Pickup",
+      "deliveryOtp": "7697",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Sunita Choudhary",
+        "address": "Near Piprali Circle, Piprali Road, Sikar",
+        "phone": "9414012345"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 20,
+      "pickupConfirmedAt": null,
+      "deliveredAt": null
+    },
+    "settlement": {
+      "foodRevenue": 800,
+      "hotelNetEarning": 840,
+      "hotelCommissionSaved": 176,
+      "zomatoLogisticsFee": 40,
+      "riderTripPayout": 35,
+      "riderBonus": 10,
+      "totalRiderEarning": 45,
+      "model": "Win-Win Direct D2C Website + Zomato 3PL Express Logistics"
+    },
+    "timeline": [
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "01:40 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "In Progress",
+        "status": "active"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "En Route to Hotel",
+        "status": "active"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "Pending Handover",
+        "status": "pending"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Pending",
+        "status": "pending"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "Pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-60521",
+    "orderNumber": 60521,
+    "createdAt": "2026-09-24T08:10:00.437Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Dr. Ramesh Sharma",
+      "phone": "9829012345",
+      "orderType": "room",
+      "roomNumber": "Room 204",
+      "tableNumber": null,
+      "address": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 640,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 32,
+      "deliveryFee": 0,
+      "grandTotal": 672
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN37400437",
+      "upiId": "9460624455@upi",
+      "upiUrl": "upi://pay?pa=9460624455@upi&pn=Hotel%20Shivansh&am=672&cu=INR&tn=Order%20SHV-60521",
+      "qrDataUrl": "data:image/png;base64,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"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room Room 204)",
+    "deliveryPartner": null,
+    "settlement": null,
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "01:40 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room Room 204)",
+        "time": "Estimated 20 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-11835",
+    "orderNumber": 11835,
+    "createdAt": "2026-09-24T08:07:28.009Z",
+    "type": "delivery",
+    "status": "Confirmed - Zomato Rider Dispatched",
+    "customer": {
+      "name": "Sunita Choudhary",
+      "phone": "9414012345",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "Near Piprali Circle, Piprali Road, Sikar",
+      "notes": "Please keep mild spicy for elderly parents"
+    },
+    "items": [
+      {
+        "id": "thali-2",
+        "name": "Authentic Rajasthani Dal Baati Churma Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Royal Platter",
+        "unitPrice": 280,
+        "quantity": 2,
+        "total": 560,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 800,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 800,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 40,
+      "deliveryFee": 0,
+      "grandTotal": 840
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN37248009",
+      "upiId": "9460624455@upi",
+      "upiUrl": "upi://pay?pa=9460624455@upi&pn=Hotel%20Shivansh&am=840&cu=INR&tn=Order%20SHV-11835",
+      "qrDataUrl": "data:image/png;base64,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"
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-208",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "assigned",
+      "statusText": "Zomato Rider Assigned & Heading to Hotel Shivansh for Pickup",
+      "deliveryOtp": "8457",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Sunita Choudhary",
+        "address": "Near Piprali Circle, Piprali Road, Sikar",
+        "phone": "9414012345"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 20,
+      "pickupConfirmedAt": null,
+      "deliveredAt": null
+    },
+    "settlement": {
+      "foodRevenue": 800,
+      "hotelNetEarning": 840,
+      "hotelCommissionSaved": 176,
+      "zomatoLogisticsFee": 40,
+      "riderTripPayout": 35,
+      "riderBonus": 10,
+      "totalRiderEarning": 45,
+      "model": "Win-Win Direct D2C Website + Zomato 3PL Express Logistics"
+    },
+    "timeline": [
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "01:37 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "In Progress",
+        "status": "active"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "En Route to Hotel",
+        "status": "active"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "Pending Handover",
+        "status": "pending"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Pending",
+        "status": "pending"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "Pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-15226",
+    "orderNumber": 15226,
+    "createdAt": "2026-09-24T08:07:27.998Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Dr. Ramesh Sharma",
+      "phone": "9829012345",
+      "orderType": "room",
+      "roomNumber": "Room 204",
+      "tableNumber": null,
+      "address": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 640,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 32,
+      "deliveryFee": 0,
+      "grandTotal": 672
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN37247998",
+      "upiId": "9460624455@upi",
+      "upiUrl": "upi://pay?pa=9460624455@upi&pn=Hotel%20Shivansh&am=672&cu=INR&tn=Order%20SHV-15226",
+      "qrDataUrl": "data:image/png;base64,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"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room Room 204)",
+    "deliveryPartner": null,
+    "settlement": null,
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "01:37 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room Room 204)",
+        "time": "Estimated 20 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-89380",
+    "orderNumber": 89380,
+    "createdAt": "2026-09-24T08:07:23.982Z",
+    "type": "delivery",
+    "status": "Confirmed - Zomato Rider Dispatched",
+    "customer": {
+      "name": "Rajendra Singh",
+      "phone": "9829012345",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "Piprali Road, Sikar",
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 640,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 32,
+      "deliveryFee": 0,
+      "grandTotal": 672
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid (Verified)",
+      "transactionRef": "UPI482910394821",
+      "paidAt": "2026-09-24T08:07:23.987Z",
+      "verifiedAmount": 672
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-129",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "assigned",
+      "statusText": "Zomato Rider Assigned & Heading to Hotel Shivansh for Pickup",
+      "deliveryOtp": "3022",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Rajendra Singh",
+        "address": "Piprali Road, Sikar",
+        "phone": "9829012345"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 20,
+      "pickupConfirmedAt": null,
+      "deliveredAt": null
+    },
+    "settlement": {
+      "foodRevenue": 640,
+      "hotelNetEarning": 672,
+      "hotelCommissionSaved": 141,
+      "zomatoLogisticsFee": 40,
+      "riderTripPayout": 35,
+      "riderBonus": 10,
+      "totalRiderEarning": 45,
+      "model": "Win-Win Direct D2C Website + Zomato 3PL Express Logistics"
+    },
+    "timeline": [
+      {
+        "step": "Payment Verified via UPI (Ref: UPI482910394821)",
+        "time": "01:37 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "01:37 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "In Progress",
+        "status": "active"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "En Route to Hotel",
+        "status": "active"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "Pending Handover",
+        "status": "pending"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Pending",
+        "status": "pending"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "Pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-55954",
+    "orderNumber": 55954,
+    "createdAt": "2026-09-24T07:54:55.304Z",
+    "type": "delivery",
+    "status": "Confirmed - Zomato Rider Dispatched",
+    "customer": {
+      "name": "Sunita Choudhary",
+      "phone": "9414012345",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "Near Piprali Circle, Piprali Road, Sikar",
+      "notes": "Please keep mild spicy for elderly parents"
+    },
+    "items": [
+      {
+        "id": "thali-2",
+        "name": "Authentic Rajasthani Dal Baati Churma Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Royal Platter",
+        "unitPrice": 280,
+        "quantity": 2,
+        "total": 560,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 800,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 800,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 40,
+      "deliveryFee": 0,
+      "grandTotal": 840
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN36495304"
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-175",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "assigned",
+      "statusText": "Zomato Rider Assigned & Heading to Hotel Shivansh for Pickup",
+      "deliveryOtp": "2208",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Sunita Choudhary",
+        "address": "Near Piprali Circle, Piprali Road, Sikar",
+        "phone": "9414012345"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 20,
+      "pickupConfirmedAt": null,
+      "deliveredAt": null
+    },
+    "settlement": {
+      "foodRevenue": 800,
+      "hotelNetEarning": 840,
+      "hotelCommissionSaved": 176,
+      "zomatoLogisticsFee": 40,
+      "riderTripPayout": 35,
+      "riderBonus": 10,
+      "totalRiderEarning": 45,
+      "model": "Win-Win Direct D2C Website + Zomato 3PL Express Logistics"
+    },
+    "timeline": [
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "01:24 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "In Progress",
+        "status": "active"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "En Route to Hotel",
+        "status": "active"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "Pending Handover",
+        "status": "pending"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Pending",
+        "status": "pending"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "Pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-63754",
+    "orderNumber": 63754,
+    "createdAt": "2026-09-24T07:54:55.300Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Dr. Ramesh Sharma",
+      "phone": "9829012345",
+      "orderType": "room",
+      "roomNumber": "Room 204",
+      "tableNumber": null,
+      "address": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 640,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 32,
+      "deliveryFee": 0,
+      "grandTotal": 672
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN36495300"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room Room 204)",
+    "deliveryPartner": null,
+    "settlement": null,
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "01:24 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room Room 204)",
+        "time": "Estimated 20 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-88593",
+    "orderNumber": 88593,
+    "createdAt": "2026-09-24T07:54:22.019Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Prakash Choudhary",
+      "phone": "9460624455",
+      "orderType": "room",
+      "roomNumber": "204",
+      "tableNumber": null,
+      "address": null,
+      "notes": "Make paneer less spicy, send extra napkins"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 1,
+        "total": 320,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "bread-1",
+        "name": "Butter Naan (Tandoori)",
+        "category": "breads",
+        "categoryName": "Tandoori Breads & Naan",
+        "portion": "1 Large Bread",
+        "unitPrice": 45,
+        "quantity": 2,
+        "total": 90,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 650,
+      "discount": 98,
+      "couponCode": "ROOMGUEST (15% Guest Special)",
+      "baseAmount": 552,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 28,
+      "deliveryFee": 0,
+      "grandTotal": 580
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid (Verified)",
+      "transactionRef": "TXN36462019"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room 204)",
+    "deliveryPartner": null,
+    "settlement": null,
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "01:24 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room 204)",
+        "time": "Estimated 20 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-57722",
+    "orderNumber": 57722,
+    "createdAt": "2026-09-24T07:39:05.829Z",
+    "type": "delivery",
+    "status": "Confirmed - Zomato Rider Dispatched",
+    "customer": {
+      "name": "Sunita Choudhary",
+      "phone": "9414012345",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "Near Piprali Circle, Piprali Road, Sikar",
+      "notes": "Please keep mild spicy for elderly parents"
+    },
+    "items": [
+      {
+        "id": "thali-2",
+        "name": "Authentic Rajasthani Dal Baati Churma Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Royal Platter",
+        "unitPrice": 280,
+        "quantity": 2,
+        "total": 560,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 800,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 800,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 40,
+      "deliveryFee": 0,
+      "grandTotal": 840
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN35545829"
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-778",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "assigned",
+      "statusText": "Zomato Rider Assigned & Heading to Hotel Shivansh for Pickup",
+      "deliveryOtp": "7847",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Sunita Choudhary",
+        "address": "Near Piprali Circle, Piprali Road, Sikar",
+        "phone": "9414012345"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 20,
+      "pickupConfirmedAt": null,
+      "deliveredAt": null
+    },
+    "settlement": {
+      "foodRevenue": 800,
+      "hotelNetEarning": 840,
+      "hotelCommissionSaved": 176,
+      "zomatoLogisticsFee": 40,
+      "riderTripPayout": 35,
+      "riderBonus": 10,
+      "totalRiderEarning": 45,
+      "model": "Win-Win Direct D2C Website + Zomato 3PL Express Logistics"
+    },
+    "timeline": [
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "01:09 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "In Progress",
+        "status": "active"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "En Route to Hotel",
+        "status": "active"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "Pending Handover",
+        "status": "pending"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Pending",
+        "status": "pending"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "Pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-47371",
+    "orderNumber": 47371,
+    "createdAt": "2026-09-24T07:39:05.824Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Dr. Ramesh Sharma",
+      "phone": "9829012345",
+      "orderType": "room",
+      "roomNumber": "Room 204",
+      "tableNumber": null,
+      "address": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 640,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 32,
+      "deliveryFee": 0,
+      "grandTotal": 672
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN35545824"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room Room 204)",
+    "deliveryPartner": null,
+    "settlement": null,
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "01:09 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room Room 204)",
+        "time": "Estimated 20 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-98986",
+    "orderNumber": 98986,
+    "createdAt": "2026-09-24T07:24:47.892Z",
+    "type": "delivery",
+    "status": "Delivered Safely by Zomato",
+    "customer": {
+      "name": "Pooja Sharma",
+      "phone": "9460699887",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "Plot 18, Piprali Road, Near Sikar Central Park",
+      "notes": "Call before reaching"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 50,
+      "couponCode": "FLAT50 (Flat ₹50 OFF)",
+      "baseAmount": 590,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 30,
+      "deliveryFee": 0,
+      "grandTotal": 620
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Paid in Cash to Zomato Rider",
+      "transactionRef": "TXN34687892"
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-871",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "delivered",
+      "statusText": "Delivered Safely to Customer by Zomato Rider",
+      "deliveryOtp": "9920",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Pooja Sharma",
+        "address": "Plot 18, Piprali Road, Near Sikar Central Park",
+        "phone": "9460699887"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 100,
+      "pickupConfirmedAt": "2026-09-24T07:24:47.932Z",
+      "deliveredAt": "2026-09-24T07:24:47.946Z"
+    },
+    "settlement": {
+      "foodRevenue": 640,
+      "hotelNetEarning": 620,
+      "hotelCommissionSaved": 141,
+      "zomatoLogisticsFee": 40,
+      "riderTripPayout": 35,
+      "riderBonus": 10,
+      "totalRiderEarning": 45,
+      "model": "Win-Win Direct D2C Website + Zomato 3PL Express Logistics"
+    },
+    "timeline": [
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "12:54 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "12:54 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "12:54 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "12:54 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Arriving in 10-15 mins",
+        "status": "completed"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "12:54 pm",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "id": "SHV-69138",
+    "orderNumber": 69138,
+    "createdAt": "2026-09-24T07:24:47.884Z",
+    "type": "table",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Vikas Shekhawat",
+      "phone": "9829033322",
+      "orderType": "table",
+      "roomNumber": null,
+      "tableNumber": "Table 5",
+      "address": null,
+      "notes": "Serve hot"
+    },
+    "items": [
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 2,
+        "total": 480,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "bread-1",
+        "name": "Butter Naan (Tandoori)",
+        "category": "breads",
+        "categoryName": "Tandoori Breads & Naan",
+        "portion": "1 Large Bread",
+        "unitPrice": 45,
+        "quantity": 4,
+        "total": 180,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 660,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 660,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 33,
+      "deliveryFee": 0,
+      "grandTotal": 693
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid (Verified)",
+      "transactionRef": "TXN34687884"
+    },
+    "estimatedTime": "20-25 mins",
+    "deliveryPartner": null,
+    "settlement": null,
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "12:54 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Served to Table Table 5",
+        "time": "Estimated 20 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-43328",
+    "orderNumber": 43328,
+    "createdAt": "2026-09-24T07:24:47.876Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Sunil Choudhary",
+      "phone": "9414012345",
+      "orderType": "room",
+      "roomNumber": "204",
+      "tableNumber": null,
+      "address": null,
+      "notes": "Less oil, serve in room"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 1,
+        "total": 320,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 320,
+      "discount": 48,
+      "couponCode": "ROOMGUEST (15% Guest Special)",
+      "baseAmount": 272,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 14,
+      "deliveryFee": 0,
+      "grandTotal": 286
+    },
+    "payment": {
+      "method": "ROOM_BILL",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN34687876"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room 204)",
+    "deliveryPartner": null,
+    "settlement": null,
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "12:54 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room 204)",
+        "time": "Estimated 20 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-95448",
+    "orderNumber": 95448,
+    "createdAt": "2026-09-24T07:16:41.348Z",
+    "type": "delivery",
+    "status": "Delivered Safely by Zomato",
+    "customer": {
+      "name": "Pooja Sharma",
+      "phone": "9460699887",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "Plot 18, Piprali Road, Near Sikar Central Park",
+      "notes": "Call before reaching"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 50,
+      "couponCode": "FLAT50 (Flat ₹50 OFF)",
+      "baseAmount": 590,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 30,
+      "deliveryFee": 0,
+      "grandTotal": 620
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Paid in Cash to Zomato Rider",
+      "transactionRef": "TXN34201348"
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-811",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "delivered",
+      "statusText": "Delivered Safely to Customer by Zomato Rider",
+      "deliveryOtp": "8353",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Pooja Sharma",
+        "address": "Plot 18, Piprali Road, Near Sikar Central Park",
+        "phone": "9460699887"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 100,
+      "pickupConfirmedAt": "2026-09-24T07:16:41.410Z",
+      "deliveredAt": "2026-09-24T07:16:41.423Z"
+    },
+    "settlement": {
+      "foodRevenue": 640,
+      "hotelNetEarning": 620,
+      "hotelCommissionSaved": 141,
+      "zomatoLogisticsFee": 40,
+      "riderTripPayout": 35,
+      "riderBonus": 10,
+      "totalRiderEarning": 45,
+      "model": "Win-Win Direct D2C Website + Zomato 3PL Express Logistics"
+    },
+    "timeline": [
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "12:46 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "12:46 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "12:46 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "12:46 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Arriving in 10-15 mins",
+        "status": "completed"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "12:46 pm",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "id": "SHV-12836",
+    "orderNumber": 12836,
+    "createdAt": "2026-09-24T07:16:41.337Z",
+    "type": "table",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Vikas Shekhawat",
+      "phone": "9829033322",
+      "orderType": "table",
+      "roomNumber": null,
+      "tableNumber": "Table 5",
+      "address": null,
+      "notes": "Serve hot"
+    },
+    "items": [
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 2,
+        "total": 480,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "bread-1",
+        "name": "Butter Naan (Tandoori)",
+        "category": "breads",
+        "categoryName": "Tandoori Breads & Naan",
+        "portion": "1 Large Bread",
+        "unitPrice": 45,
+        "quantity": 4,
+        "total": 180,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 660,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 660,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 33,
+      "deliveryFee": 0,
+      "grandTotal": 693
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid (Verified)",
+      "transactionRef": "TXN34201337"
+    },
+    "estimatedTime": "20-25 mins",
+    "deliveryPartner": null,
+    "settlement": null,
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "12:46 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Served to Table Table 5",
+        "time": "Estimated 20 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-22655",
+    "orderNumber": 22655,
+    "createdAt": "2026-09-24T07:16:41.326Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Sunil Choudhary",
+      "phone": "9414012345",
+      "orderType": "room",
+      "roomNumber": "204",
+      "tableNumber": null,
+      "address": null,
+      "notes": "Less oil, serve in room"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 1,
+        "total": 320,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 320,
+      "discount": 48,
+      "couponCode": "ROOMGUEST (15% Guest Special)",
+      "baseAmount": 272,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 14,
+      "deliveryFee": 0,
+      "grandTotal": 286
+    },
+    "payment": {
+      "method": "ROOM_BILL",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN34201326"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room 204)",
+    "deliveryPartner": null,
+    "settlement": null,
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "12:46 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room 204)",
+        "time": "Estimated 20 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-80885",
+    "orderNumber": 80885,
+    "createdAt": "2026-09-24T07:01:28.742Z",
+    "type": "delivery",
+    "status": "Delivered Safely by Zomato",
+    "customer": {
+      "name": "Raghav Sharma",
+      "phone": "9829055443",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "Near Court Road, Nawalgarh Road, Sikar (Rajasthan)",
+      "notes": "Extra butter on rotis, send fresh salad"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 880,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 880,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 44,
+      "deliveryFee": 0,
+      "grandTotal": 924
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid (Verified)",
+      "transactionRef": "TXN33288742"
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-763",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "delivered",
+      "statusText": "Delivered Safely to Customer by Zomato Rider",
+      "deliveryOtp": "4216",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Raghav Sharma",
+        "address": "Near Court Road, Nawalgarh Road, Sikar (Rajasthan)",
+        "phone": "9829055443"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 100,
+      "pickupConfirmedAt": "2026-09-24T07:01:28.757Z",
+      "deliveredAt": "2026-09-24T07:01:28.767Z"
+    },
+    "settlement": {
+      "foodRevenue": 880,
+      "hotelNetEarning": 924,
+      "hotelCommissionSaved": 194,
+      "zomatoLogisticsFee": 40,
+      "riderTripPayout": 35,
+      "riderBonus": 10,
+      "totalRiderEarning": 45,
+      "model": "Win-Win Direct D2C Website + Zomato 3PL Express Logistics"
+    },
+    "timeline": [
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "12:31 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "12:31 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "12:31 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "12:31 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Arriving in 10-15 mins",
+        "status": "completed"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "12:31 pm",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "id": "SHV-12278",
+    "orderNumber": 12278,
+    "createdAt": "2026-09-24T06:50:37.032Z",
+    "type": "delivery",
+    "status": "Delivered Safely by Zomato",
+    "customer": {
+      "name": "Amit Shekhawat",
+      "phone": "9829012345",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "House #42, Near Silver Jublee Road, Piprali Road, Sikar",
+      "notes": "Extra green chutney, pure desi ghee"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 880,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 880,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 44,
+      "deliveryFee": 0,
+      "grandTotal": 924
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Paid in Cash to Zomato Rider",
+      "transactionRef": "TXN32637032"
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-685",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "delivered",
+      "statusText": "Delivered Safely to Customer by Zomato Rider",
+      "deliveryOtp": "8645",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Amit Shekhawat",
+        "address": "House #42, Near Silver Jublee Road, Piprali Road, Sikar",
+        "phone": "9829012345"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 100,
+      "pickupConfirmedAt": "2026-09-24T06:50:37.068Z",
+      "deliveredAt": "2026-09-24T06:50:37.086Z"
+    },
+    "timeline": [
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "12:20 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "12:20 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "12:20 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "12:20 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Arriving in 10-15 mins",
+        "status": "completed"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "12:20 pm",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "id": "SHV-94118",
+    "orderNumber": 94118,
+    "createdAt": "2026-09-24T06:33:34.733Z",
+    "type": "delivery",
+    "status": "Delivered Safely by Zomato",
+    "customer": {
+      "name": "Amit Shekhawat",
+      "phone": "9829012345",
+      "orderType": "delivery",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": "House #42, Near Silver Jublee Road, Piprali Road, Sikar",
+      "notes": "Extra green chutney, pure desi ghee"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "/assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 880,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 880,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 44,
+      "deliveryFee": 0,
+      "grandTotal": 924
+    },
+    "payment": {
+      "method": "CASH",
+      "status": "Paid in Cash to Zomato Rider",
+      "transactionRef": "TXN31614733"
+    },
+    "estimatedTime": "25-30 mins via Zomato Express",
+    "deliveryPartner": {
+      "provider": "Zomato Express Logistics",
+      "brand": "Zomato",
+      "fleetType": "Zomato Red Sikar Fleet",
+      "riderId": "ZOM-SKR-877",
+      "riderName": "Vikram Saini",
+      "riderPhone": "+91 98292 48110",
+      "vehicleNumber": "RJ-23-SZ-4891",
+      "vehicleType": "Hero Splendor (Thermal Delivery Bag)",
+      "rating": 4.9,
+      "tripsCount": 1840,
+      "avatar": "VS",
+      "stage": "delivered",
+      "statusText": "Delivered Safely to Customer by Zomato Rider",
+      "deliveryOtp": "2449",
+      "pickupLocation": {
+        "name": "Hotel Shivansh Kitchen & Restaurant",
+        "address": "Near Railway Station, Salasar Road, Sikar (Raj.)",
+        "contact": "+91 94606 24455"
+      },
+      "dropLocation": {
+        "name": "Amit Shekhawat",
+        "address": "House #42, Near Silver Jublee Road, Piprali Road, Sikar",
+        "phone": "9829012345"
+      },
+      "etaMinutes": 28,
+      "progressPercent": 100,
+      "pickupConfirmedAt": "2026-09-24T06:33:34.747Z",
+      "deliveredAt": "2026-09-24T06:33:34.756Z"
+    },
+    "timeline": [
+      {
+        "step": "Order Placed & Confirmed",
+        "time": "12:03 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Hotel Shivansh Kitchen Preparing Food",
+        "time": "12:03 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Zomato Delivery Partner Assigned (Vikram Saini - RJ-23-SZ-4891)",
+        "time": "12:03 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Food Picked Up from Hotel Shivansh Kitchen",
+        "time": "12:03 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Out for Doorstep Delivery across Sikar",
+        "time": "Arriving in 10-15 mins",
+        "status": "completed"
+      },
+      {
+        "step": "Order Delivered to Customer (OTP Verified)",
+        "time": "12:03 pm",
+        "status": "completed"
+      }
+    ]
+  },
+  {
+    "id": "SHV-30693",
+    "orderNumber": 30693,
+    "createdAt": "2026-09-22T12:13:08.556Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Rahul Verma",
+      "phone": "9876543210",
+      "orderType": "room",
+      "roomNumber": "204",
+      "tableNumber": null,
+      "address": null,
+      "notes": "Less spicy, extra butter naan please"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 96,
+      "couponCode": "ROOMGUEST (15% Guest Special)",
+      "baseAmount": 544,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 27,
+      "deliveryFee": 0,
+      "grandTotal": 571
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid (Verified)",
+      "transactionRef": "TXN79188556"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room 204)",
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "05:43 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room 204)",
+        "time": "Estimated 25 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-77370",
+    "orderNumber": 77370,
+    "createdAt": "2026-09-22T12:11:48.403Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Rahul Verma",
+      "phone": "9876543210",
+      "orderType": "room",
+      "roomNumber": "204",
+      "tableNumber": null,
+      "address": null,
+      "notes": "Less spicy, extra butter naan please"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 2,
+        "total": 640,
+        "image": "/assets/restaurant_thali.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 640,
+      "discount": 96,
+      "couponCode": "ROOMGUEST (15% Guest Special)",
+      "baseAmount": 544,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 27,
+      "deliveryFee": 0,
+      "grandTotal": 571
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid (Verified)",
+      "transactionRef": "TXN79108403"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room 204)",
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "05:41 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room 204)",
+        "time": "Estimated 25 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-91954",
+    "orderNumber": 91954,
+    "createdAt": "2026-09-22T11:40:37.243Z",
+    "type": "dine-in",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Simran Pareek",
+      "phone": "9549944445",
+      "orderType": "dine-in",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "ct-toast-bhurji",
+        "name": "Sikar Signature Paneer Bhurji Toast",
+        "category": "Specials",
+        "unitPrice": 140,
+        "quantity": 1,
+        "total": 140,
+        "image": "/3.jpeg",
+        "instructions": ""
+      },
+      {
+        "id": "7fef7df3-ebce-49a4-af41-59a0583167db",
+        "name": "South Indian Filter Kaapi",
+        "category": "Beverages",
+        "unitPrice": 60,
+        "quantity": 2,
+        "total": 120,
+        "image": "/filter-coffee.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 260,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 260,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 13,
+      "deliveryFee": 0,
+      "grandTotal": 273
+    },
+    "payment": {
+      "method": "COD",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN77237243"
+    },
+    "estimatedTime": "25-35 mins",
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "05:10 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Out for Doorstep Delivery",
+        "time": "Estimated 25 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-26985",
+    "orderNumber": 26985,
+    "createdAt": "2026-09-22T11:26:03.023Z",
+    "type": "dine-in",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Rohan Verma",
+      "phone": "9876543210",
+      "orderType": "dine-in",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "ct-toast-bhurji",
+        "name": "Sikar Signature Paneer Bhurji Toast",
+        "category": "Specials",
+        "unitPrice": 140,
+        "quantity": 2,
+        "total": 280,
+        "image": "/3.jpeg",
+        "instructions": ""
+      },
+      {
+        "id": "7fef7df3-ebce-49a4-af41-59a0583167db",
+        "name": "South Indian Filter Kaapi",
+        "category": "Beverages",
+        "unitPrice": 60,
+        "quantity": 2,
+        "total": 120,
+        "image": "/filter-coffee.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 400,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 400,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 20,
+      "deliveryFee": 0,
+      "grandTotal": 420
+    },
+    "payment": {
+      "method": "COD",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN76363023"
+    },
+    "estimatedTime": "25-35 mins",
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "04:56 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Out for Doorstep Delivery",
+        "time": "Estimated 25 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-47704",
+    "orderNumber": 47704,
+    "createdAt": "2026-09-22T11:25:21.208Z",
+    "type": "dine-in",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Rohan Verma",
+      "phone": "9876543210",
+      "orderType": "dine-in",
+      "roomNumber": null,
+      "tableNumber": null,
+      "address": null,
+      "notes": ""
+    },
+    "items": [
+      {
+        "id": "ct-toast-bhurji",
+        "name": "Sikar Signature Paneer Bhurji Toast",
+        "category": "Specials",
+        "unitPrice": 140,
+        "quantity": 2,
+        "total": 280,
+        "image": "/3.jpeg",
+        "instructions": ""
+      },
+      {
+        "id": "7fef7df3-ebce-49a4-af41-59a0583167db",
+        "name": "South Indian Filter Kaapi",
+        "category": "Beverages",
+        "unitPrice": 60,
+        "quantity": 2,
+        "total": 120,
+        "image": "/filter-coffee.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 400,
+      "discount": 0,
+      "couponCode": null,
+      "baseAmount": 400,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 20,
+      "deliveryFee": 0,
+      "grandTotal": 420
+    },
+    "payment": {
+      "method": "COD",
+      "status": "Pay on Delivery / Service",
+      "transactionRef": "TXN76321208"
+    },
+    "estimatedTime": "25-35 mins",
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "04:55 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Out for Doorstep Delivery",
+        "time": "Estimated 25 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-81420",
+    "orderNumber": 81420,
+    "createdAt": "2026-09-07T12:55:26.997Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Prakash Choudhary",
+      "phone": "9460624455",
+      "orderType": "room",
+      "roomNumber": "204",
+      "tableNumber": null,
+      "address": null,
+      "notes": "Make paneer less spicy, send extra napkins"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 1,
+        "total": 320,
+        "image": "assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "bread-1",
+        "name": "Butter Naan (Tandoori)",
+        "category": "breads",
+        "categoryName": "Tandoori Breads & Naan",
+        "portion": "1 Large Bread",
+        "unitPrice": 45,
+        "quantity": 2,
+        "total": 90,
+        "image": "assets/dish_paneer.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 650,
+      "discount": 98,
+      "couponCode": "ROOMGUEST (15% Guest Special)",
+      "baseAmount": 552,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 28,
+      "deliveryFee": 0,
+      "grandTotal": 580
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid (Verified)",
+      "transactionRef": "TXN85726997"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room 204)",
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "06:25 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room 204)",
+        "time": "Estimated 25 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-11631",
+    "orderNumber": 11631,
+    "createdAt": "2026-09-07T12:52:56.477Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Prakash Choudhary",
+      "phone": "9460624455",
+      "orderType": "room",
+      "roomNumber": "204",
+      "tableNumber": null,
+      "address": null,
+      "notes": "Make paneer less spicy, send extra napkins"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 1,
+        "total": 320,
+        "image": "assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "bread-1",
+        "name": "Butter Naan (Tandoori)",
+        "category": "breads",
+        "categoryName": "Tandoori Breads & Naan",
+        "portion": "1 Large Bread",
+        "unitPrice": 45,
+        "quantity": 2,
+        "total": 90,
+        "image": "assets/dish_paneer.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 650,
+      "discount": 98,
+      "couponCode": "ROOMGUEST (15% Guest Special)",
+      "baseAmount": 552,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 28,
+      "deliveryFee": 0,
+      "grandTotal": 580
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid (Verified)",
+      "transactionRef": "TXN85576478"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room 204)",
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "06:22 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room 204)",
+        "time": "Estimated 25 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "SHV-26829",
+    "orderNumber": 26829,
+    "createdAt": "2026-09-07T12:45:12.689Z",
+    "type": "room",
+    "status": "Confirmed - Preparing in Kitchen",
+    "customer": {
+      "name": "Prakash Choudhary",
+      "phone": "9460624455",
+      "orderType": "room",
+      "roomNumber": "204",
+      "tableNumber": null,
+      "address": null,
+      "notes": "Make paneer less spicy, send extra napkins"
+    },
+    "items": [
+      {
+        "id": "thali-1",
+        "name": "Shivansh Maharaja Special Royal Thali",
+        "category": "thali",
+        "categoryName": "Royal Thalis & Combos",
+        "portion": "Grand Thali",
+        "unitPrice": 320,
+        "quantity": 1,
+        "total": 320,
+        "image": "assets/restaurant_thali.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "bread-1",
+        "name": "Butter Naan (Tandoori)",
+        "category": "breads",
+        "categoryName": "Tandoori Breads & Naan",
+        "portion": "1 Large Bread",
+        "unitPrice": 45,
+        "quantity": 2,
+        "total": 90,
+        "image": "assets/dish_paneer.jpg",
+        "instructions": ""
+      },
+      {
+        "id": "main-1",
+        "name": "Paneer Butter Masala (Handi Special)",
+        "category": "mains",
+        "categoryName": "Paneer & Main Course",
+        "portion": "Handi (Serves 2)",
+        "unitPrice": 240,
+        "quantity": 1,
+        "total": 240,
+        "image": "assets/dish_paneer.jpg",
+        "instructions": ""
+      }
+    ],
+    "pricing": {
+      "subtotal": 650,
+      "discount": 98,
+      "couponCode": "ROOMGUEST (15% Guest Special)",
+      "baseAmount": 552,
+      "gstRate": "5% Restaurant GST",
+      "gstAmount": 28,
+      "deliveryFee": 0,
+      "grandTotal": 580
+    },
+    "payment": {
+      "method": "UPI_QR",
+      "status": "Paid (Verified)",
+      "transactionRef": "TXN85112689"
+    },
+    "estimatedTime": "20-25 mins (Delivered to Room 204)",
+    "timeline": [
+      {
+        "step": "Order Placed",
+        "time": "06:15 pm",
+        "status": "completed"
+      },
+      {
+        "step": "Kitchen Order Ticket (KOT) Generated",
+        "time": "Underway",
+        "status": "active"
+      },
+      {
+        "step": "Chef Preparation & Garnish",
+        "time": "In Progress",
+        "status": "pending"
+      },
+      {
+        "step": "Room Service Delivery (Room 204)",
+        "time": "Estimated 25 mins",
+        "status": "pending"
+      }
+    ]
+  },
+  {
     "id": "HKK-2026-1059",
     "orderNumber": 1059,
     "createdAt": "2026-09-04T11:07:29.429Z",

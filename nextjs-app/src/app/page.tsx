@@ -1,47 +1,32 @@
-import Header from '@/components/Header';
+'use client';
+
+import React from 'react';
 import Hero from '@/components/Hero';
-import TrustBar from '@/components/TrustBar';
-import Calculator from '@/components/Calculator';
-import ProductCatalog from '@/components/ProductCatalog';
-import CommercialSection from '@/components/CommercialSection';
-import ShowroomSection from '@/components/ShowroomSection';
-import ServiceBooking from '@/components/ServiceBooking';
+import WhyShivanshSection from '@/components/WhyShivanshSection';
+import RoomsShowcaseSection from '@/components/RoomsShowcaseSection';
+import SpecialsSection from '@/components/SpecialsSection';
+import DiningModeSection from '@/components/DiningModeSection';
+import MenuSection from '@/components/MenuSection';
+import InRoomDiningSection from '@/components/InRoomDiningSection';
+import TableReservationSection from '@/components/TableReservationSection';
 import ReviewsSection from '@/components/ReviewsSection';
 import FAQSection from '@/components/FAQSection';
-import Footer from '@/components/Footer';
-import FloatingActions from '@/components/FloatingActions';
-import CartDrawer from '@/components/CartDrawer';
-import ProductModal from '@/components/ProductModal';
-import CompareDrawer from '@/components/CompareDrawer';
-import CheckoutModal from '@/components/CheckoutModal';
-import TrackOrderModal from '@/components/TrackOrderModal';
-import OrderSuccessModal from '@/components/OrderSuccessModal';
-import QuoteModal from '@/components/QuoteModal';
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <TrustBar />
-        <Calculator />
-        <ProductCatalog />
-        <CommercialSection />
-        <ShowroomSection />
-        <ServiceBooking />
-        <ReviewsSection />
-        <FAQSection />
-      </main>
-      <Footer />
-      <FloatingActions />
-      <CartDrawer />
-      <CompareDrawer />
-      <ProductModal />
-      <CheckoutModal />
-      <TrackOrderModal />
-      <OrderSuccessModal />
-      <QuoteModal />
-    </>
+    <div className="bg-[#080c14] text-slate-100 min-h-screen">
+      <Hero />
+      <div id="why-shivansh">
+        <WhyShivanshSection />
+      </div>
+      <RoomsShowcaseSection />
+      <SpecialsSection />
+      <DiningModeSection />
+      <MenuSection />
+      <InRoomDiningSection />
+      <TableReservationSection />
+      <ReviewsSection />
+      <FAQSection />
+    </div>
   );
 }

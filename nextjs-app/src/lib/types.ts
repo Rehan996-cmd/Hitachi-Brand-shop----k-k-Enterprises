@@ -1,34 +1,36 @@
-export interface Product {
+export interface Dish {
   id: string;
   name: string;
-  category: 'split_ac' | 'window_ac' | 'commercial_ac' | 'washing_machines' | 'appliances';
-  subCategory: string;
-  tonnage: string;
-  tonnageVal: number;
-  starRating: number;
-  technology: string;
-  condenser: string;
-  iseer: number | string;
-  powerConsumption: string;
-  coolingCapacity: string;
-  noiseLevel: string;
-  refrigerant: string;
-  warranty: string;
+  category: 'thali' | 'mains' | 'starters' | 'breads' | 'biryani' | 'chinese' | 'breakfast' | 'desserts' | 'beverages';
+  categoryName: string;
   price: number;
-  mrp: number;
-  discount: string;
-  emi: string;
+  originalPrice?: number;
+  rating: number;
+  reviewCount?: number;
   image: string;
-  badge: string;
-  highlight: string;
-  features: string[];
-  idealFor: string;
+  description: string;
+  prepTime: string;
+  isVeg: boolean;
+  isChefSpecial: boolean;
+  isBestSeller: boolean;
+  spiceLevel: 'mild' | 'medium' | 'spicy';
+  portion?: string;
+  calories?: string;
+  tags?: string[];
 }
 
 export interface CartItem {
   id: string;
   quantity: number;
+  portion?: string;
+  spice?: 'mild' | 'medium' | 'spicy';
+  addOns?: string[];
+  instructions?: string;
+  unitPrice?: number;
 }
+
+export type DiningMode = 'room' | 'table' | 'delivery';
+export type PaymentMethod = 'UPI_QR' | 'CASH' | 'CARD' | 'ROOM_BILL';
 
 export interface CouponInfo {
   code: string;
@@ -39,13 +41,11 @@ export interface CouponInfo {
 export interface OrderCustomer {
   name: string;
   phone: string;
-  email: string;
-  address: string;
-  landmark: string;
-  city: string;
-  pincode: string;
-  deliverySlot: string;
-  gstin: string;
+  orderType: DiningMode;
+  roomNumber?: string | null;
+  tableNumber?: string | null;
+  address?: string | null;
+  notes?: string;
 }
 
 export interface OrderPricing {
@@ -56,16 +56,61 @@ export interface OrderPricing {
   gstRate: string;
   gstAmount: number;
   deliveryFee: number;
-  installationFee: number;
   grandTotal: number;
 }
 
 export interface OrderPayment {
-  method: string;
+  method: PaymentMethod;
   status: string;
-  transactionRef: string;
-  utr?: string;
-  verifiedAt: string;
+  transactionRef?: string;
+  verifiedAt?: string;
+}
+
+export interface OrderItem {
+  id: string;
+  name: string;
+  category?: string;
+  categoryName?: string;
+  portion?: string;
+  unitPrice: number;
+  quantity: number;
+  total: number;
+  image?: string;
+  instructions?: string;
+  spice?: string;
+}
+
+export type ZomatoDeliveryStage = 'assigned' | 'heading_to_hotel' | 'at_hotel' | 'picked_up' | 'out_for_delivery' | 'delivered';
+
+export interface DeliveryPartnerInfo {
+  provider: string;
+  brand?: string;
+  fleetType?: string;
+  riderId?: string;
+  riderName: string;
+  riderPhone?: string;
+  vehicleNumber?: string;
+  vehicleType?: string;
+  rating?: number;
+  tripsCount?: number;
+  avatar?: string;
+  stage: ZomatoDeliveryStage;
+  statusText: string;
+  deliveryOtp?: string | null;
+  pickupLocation?: {
+    name: string;
+    address: string;
+    contact: string;
+  };
+  dropLocation?: {
+    name: string;
+    address: string;
+    phone: string;
+  };
+  etaMinutes?: number;
+  progressPercent?: number;
+  pickupConfirmedAt?: string | null;
+  deliveredAt?: string | null;
 }
 
 export interface OrderTimeline {
@@ -74,31 +119,57 @@ export interface OrderTimeline {
   status: 'completed' | 'active' | 'pending';
 }
 
-export interface OrderItem {
-  id: string;
-  name: string;
-  category: string;
-  tonnage: string;
-  price: number;
-  mrp: number;
-  quantity: number;
-  total: number;
-  image: string;
+export interface OrderSettlement {
+  foodRevenue: number;
+  hotelNetEarning: number;
+  hotelCommissionSaved: number;
+  zomatoLogisticsFee: number;
+  riderTripPayout: number;
+  riderBonus: number;
+  totalRiderEarning: number;
+  model: string;
 }
 
 export interface Order {
   id: string;
   orderNumber: number;
   createdAt: string;
+  type: DiningMode;
   status: string;
   customer: OrderCustomer;
   items: OrderItem[];
   pricing: OrderPricing;
   payment: OrderPayment;
+  estimatedTime?: string;
+  deliveryOtp?: string | null;
+  deliveryPartner?: DeliveryPartnerInfo | null;
+  settlement?: OrderSettlement | null;
   timeline: OrderTimeline[];
 }
 
-export type CategoryFilter = 'all' | 'split_ac' | 'window_ac' | 'commercial_ac' | 'washing_machines' | 'appliances';
-export type TonnageFilter = 'all' | '1.0' | '1.5' | '2.0' | 'commercial';
-export type StarFilter = 'all' | '3' | '5';
-export type PaymentMethod = 'UPI_QR' | 'CARD' | 'NETBANKING' | 'EMI' | 'COD';
+export interface TableReservation {
+  id: string;
+  createdAt: string;
+  name: string;
+  phone: string;
+  guests: string;
+  section: string;
+  date: string;
+  time: string;
+  notes?: string;
+  status: string;
+}
+
+export interface RoomInquiry {
+  id: string;
+  createdAt: string;
+  name: string;
+  phone: string;
+  roomType: string;
+  checkIn: string;
+  checkOut: string;
+  status: string;
+}
+
+export type CategoryFilter = 'all' | 'thali' | 'mains' | 'starters' | 'breads' | 'biryani' | 'chinese' | 'breakfast' | 'desserts' | 'beverages';
+export type DietaryFilter = 'all' | 'bestseller' | 'chef' | 'spicy' | 'mild';

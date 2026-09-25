@@ -1,0 +1,52 @@
+[
+  {
+    "id": "INQ-6716",
+    "createdAt": "2026-09-24T07:24:47.904Z",
+    "name": "",
+    "phone": "9460677889",
+    "roomType": "Deluxe AC Room",
+    "checkIn": "",
+    "checkOut": "",
+    "status": "Received"
+  },
+  {
+    "id": "INQ-6104",
+    "createdAt": "2026-09-24T07:16:41.377Z",
+    "name": "",
+    "phone": "9460677889",
+    "roomType": "Deluxe AC Room",
+    "checkIn": "",
+    "checkOut": "",
+    "status": "Received"
+  },
+  {
+    "id": "INQ-7039",
+    "createdAt": "2026-09-22T12:13:08.568Z",
+    "name": "Karan Sharma",
+    "phone": "9811223344",
+    "roomType": "Royal Suite (AC, Maharaja Bed, City View)",
+    "checkIn": "2026-10-01",
+    "checkOut": "2026-10-03",
+    "status": "Received"
+  },
+  {
+    "id": "INQ-4233",
+    "createdAt": "2026-09-22T12:11:48.442Z",
+    "name": "Karan Sharma",
+    "phone": "9811223344",
+    "roomType": "Royal Suite (AC, Maharaja Bed, City View)",
+    "checkIn": "2026-10-01",
+    "checkOut": "2026-10-03",
+    "status": "Received"
+  },
+  {
+    "id": "INQ-4926",
+    "createdAt": "2026-09-22T12:08:23.002Z",
+    "name": "",
+    "phone": "",
+    "roomType": "Royal Suite (AC, Maharaja Bed, City View)",
+    "checkIn": "2026-10-01",
+    "checkOut": "2026-10-03",
+    "status": "Received"
+  }
+]

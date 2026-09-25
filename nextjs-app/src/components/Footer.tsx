@@ -1,78 +1,182 @@
-import { MapPin, Phone, Clock } from 'lucide-react';
+'use client';
+
+import React from 'react';
+import { Crown, Phone, MapPin, Mail, Clock, ExternalLink, Star, MessageSquare } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="site-footer">
-      <div className="container">
-        <div className="footer-grid">
-          <div className="footer-col footer-brand">
-            <div className="brand-hitachi" style={{ color: '#ffffff' }}>HITACHI</div>
-            <h4 style={{ color: '#e60012', marginBottom: 8 }}>K.K. Enterprises</h4>
-            <p className="footer-desc">
-              Official Authorized Hitachi Brand Shop and Dealer in Sikar, Rajasthan. Specializing in Inverter Split ACs, Kaze Plus Window ACs, VRF Multi-Zone Air Conditioning, Washing Machines, and Home Inverters.
-            </p>
-            <div style={{ display: 'flex', gap: 10 }}>
-              <span className="copper-badge">100% Copper Partner</span>
-              <span className="product-badge">Authorized Sales & Service</span>
-            </div>
-          </div>
+    <footer className="bg-[#05080f] text-slate-300 border-t border-[#d4af37]/30 pt-16 pb-24 lg:pb-12 relative overflow-hidden" id="contact">
+      {/* Decorative Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-[#d4af37]/5 blur-3xl pointer-events-none" />
 
-          <div className="footer-col">
-            <h4>Cooling Range</h4>
-            <ul className="footer-links">
-              <li><a href="#catalog">airHome Inverter Split ACs</a></li>
-              <li><a href="#catalog">5-Star & 3-Star Split ACs</a></li>
-              <li><a href="#catalog">Hitachi Kaze Plus Window ACs</a></li>
-              <li><a href="#commercial">4-Way Round Flow Cassette ACs</a></li>
-              <li><a href="#commercial">Set-Free Commercial VRF Systems</a></li>
-              <li><a href="#commercial">Central Concealed Ductable ACs</a></li>
-            </ul>
-          </div>
-
-          <div className="footer-col">
-            <h4>Appliances & Tools</h4>
-            <ul className="footer-links">
-              <li><a href="#catalog">Front Load Inverter Washers</a></li>
-              <li><a href="#catalog">Top Load & Semi-Auto Washers</a></li>
-              <li><a href="#catalog">Hitachi French Door Refrigerators</a></li>
-              <li><a href="#catalog">Home Inverters & Tubular Batteries</a></li>
-              <li><a href="#calculator">AC Room Size Calculator</a></li>
-              <li><a href="#savings">Electricity Savings Calculator</a></li>
-            </ul>
-          </div>
-
-          <div className="footer-col">
-            <h4>Showroom Contact</h4>
-            <div className="footer-contact-item">
-              <MapPin size={16} style={{ flexShrink: 0, marginTop: 2 }} />
-              <div>Ganpati Tower, Mohalla Qureshi / Sikar Roadlines Area, Sikar, Rajasthan - 332001</div>
-            </div>
-            <div className="footer-contact-item">
-              <Phone size={16} style={{ flexShrink: 0, marginTop: 2 }} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-16">
+          
+          {/* Column 1: Brand & Justdial Badge */}
+          <div className="space-y-5">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#d4af37] via-[#b38e44] to-[#aa771c] border border-amber-300 flex items-center justify-center text-[#080c14] shadow-lg">
+                <Crown size={20} className="stroke-[2.5]" />
+              </div>
               <div>
-                <a href="tel:+919587111100" style={{ color: '#ffffff', fontWeight: 'bold' }}>+91 95871 11100</a>
+                <span className="font-serif font-black text-2xl text-white tracking-wide block leading-none">
+                  HOTEL SHIVANSH
+                </span>
+                <span className="text-[10px] text-[#d4af37] tracking-[0.2em] font-bold uppercase mt-1 block">
+                  Royal Stay &amp; Pure Veg Dining
+                </span>
               </div>
             </div>
-            <div className="footer-contact-item">
-              <Clock size={16} style={{ flexShrink: 0, marginTop: 2 }} />
-              <div>Mon - Sun: 10:00 AM - 8:30 PM</div>
-            </div>
-            <div style={{ marginTop: 14 }}>
-              <a href="https://wa.me/919587111100" target="_blank" rel="noopener" className="btn btn-whatsapp" style={{ padding: '8px 16px' }}>
-                Direct WhatsApp Chat
+
+            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+              Sikar&apos;s premier destination for luxury AC accommodation and authentic 100% pure vegetarian royal dining. Located centrally opposite Roadways Bus Depot.
+            </p>
+
+            {/* Justdial Verified Badge */}
+            <a
+              href="https://www.justdial.com/Sikar/HOTEL-SHIVANSH-Opposite-Roadways-Bus-Depot-Sikar-Roadlines/9999P1572-1572-251202150053-X6V6_BZDET"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-[#0d1522] border border-[#d4af37]/40 hover:border-[#d4af37] px-4 py-2.5 rounded-2xl transition group shadow-md"
+            >
+              <div className="flex items-center gap-1 bg-[#d4af37] text-[#080c14] px-2 py-0.5 rounded-md font-bold text-xs">
+                <span>5.0</span>
+                <Star size={12} className="fill-[#080c14]" />
+              </div>
+              <div className="text-left">
+                <span className="text-white text-xs font-bold block group-hover:text-[#d4af37] transition">
+                  Rated 5.0 on Justdial
+                </span>
+                <span className="text-[10px] text-slate-400 block">11 Reviews · 55+ Photos</span>
+              </div>
+              <ExternalLink size={14} className="text-slate-400 group-hover:text-[#d4af37] ml-auto transition" />
+            </a>
+          </div>
+
+          {/* Column 2: Quick Links */}
+          <div className="space-y-4">
+            <h4 className="font-serif font-bold text-base text-white tracking-wider uppercase border-b border-[#d4af37]/30 pb-2">
+              Quick Navigation
+            </h4>
+            <ul className="space-y-2.5 text-xs sm:text-sm">
+              <li>
+                <a href="#rooms" className="hover:text-[#d4af37] transition flex items-center gap-2">
+                  <span className="text-[#d4af37]">›</span> AC Rooms &amp; Suites (From ₹1,999)
+                </a>
+              </li>
+              <li>
+                <a href="#menu" className="hover:text-[#d4af37] transition flex items-center gap-2">
+                  <span className="text-[#d4af37]">›</span> Royal Pure Veg Menu
+                </a>
+              </li>
+              <li>
+                <a href="#thali" className="hover:text-[#d4af37] transition flex items-center gap-2">
+                  <span className="text-[#d4af37]">›</span> Maharaja Special Thali
+                </a>
+              </li>
+              <li>
+                <a href="#inroom" className="hover:text-[#d4af37] transition flex items-center gap-2">
+                  <span className="text-[#d4af37]">›</span> 24x7 In-Room Dining Service
+                </a>
+              </li>
+              <li>
+                <a href="#reservation" className="hover:text-[#d4af37] transition flex items-center gap-2">
+                  <span className="text-[#d4af37]">›</span> Reserve Dining Table / Banquet
+                </a>
+              </li>
+              <li>
+                <a href="#reviews" className="hover:text-[#d4af37] transition flex items-center gap-2">
+                  <span className="text-[#d4af37]">›</span> Guest Testimonials
+                </a>
+              </li>
+              <li>
+                <a href="#faq" className="hover:text-[#d4af37] transition flex items-center gap-2">
+                  <span className="text-[#d4af37]">›</span> FAQs &amp; Room Policies
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3: Contact & Direct Inquiries */}
+          <div className="space-y-4">
+            <h4 className="font-serif font-bold text-base text-white tracking-wider uppercase border-b border-[#d4af37]/30 pb-2">
+              24x7 Front Desk
+            </h4>
+            <ul className="space-y-3 text-xs sm:text-sm">
+              <li className="flex items-start gap-3">
+                <MapPin size={18} className="text-[#d4af37] shrink-0 mt-0.5" />
+                <span className="leading-snug">
+                  Opposite Roadways Bus Depot, Sikar Roadlines, Sikar, Rajasthan - 332001
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={16} className="text-[#d4af37] shrink-0" />
+                <a href="tel:+919460624455" className="hover:text-[#d4af37] transition font-bold text-white">
+                  +91 94606 24455
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <MessageSquare size={16} className="text-emerald-400 shrink-0" />
+                <a
+                  href="https://wa.me/919460624455?text=Hello%20Hotel%20Shivansh,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20room"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-emerald-300 text-emerald-400 font-bold transition"
+                >
+                  WhatsApp Booking &amp; Support
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Clock size={16} className="text-[#d4af37] shrink-0" />
+                <span>Open 24 Hours (Check-in &amp; Room Service)</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Online Ordering & Directions */}
+          <div className="space-y-4">
+            <h4 className="font-serif font-bold text-base text-white tracking-wider uppercase border-b border-[#d4af37]/30 pb-2">
+              Order Online &amp; Location
+            </h4>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Order authentic pure veg delicacies delivered anywhere in Sikar via Zomato or direct kitchen dispatch.
+            </p>
+            <div className="flex flex-col gap-2.5 pt-1">
+              <a
+                href="https://www.zomato.com/sikar/restaurants?q=Hotel+Shivansh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#e23744] hover:bg-[#cb202d] text-white px-4 py-2.5 rounded-xl font-bold text-xs flex items-center justify-between transition shadow-md"
+              >
+                <span>Order on Zomato</span>
+                <span className="text-[10px] bg-black/25 px-2 py-0.5 rounded">Rating 4.8</span>
+              </a>
+              <a
+                href="https://www.google.com/maps/search/Hotel+Shivansh+Opposite+Roadways+Bus+Depot+Sikar+Rajasthan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#121c2e] hover:bg-[#1a2842] border border-[#d4af37]/40 text-slate-200 px-4 py-2.5 rounded-xl font-bold text-xs flex items-center justify-between transition shadow-md"
+              >
+                <span>Google Maps Directions</span>
+                <MapPin size={14} className="text-[#d4af37]" />
               </a>
             </div>
           </div>
+
         </div>
 
-        <div className="footer-bottom">
-          <div>&copy; 2026 Hitachi Brand Shop - K.K. Enterprises. All Rights Reserved. Authorized Hitachi Dealer Sikar.</div>
-          <div style={{ display: 'flex', gap: 20 }}>
-            <a href="#hero">Back to Top</a>
-            <a href="#showroom">Store Directions</a>
-            <a href="#service">Book Service</a>
+        {/* Bottom Bar */}
+        <div className="border-t border-[#d4af37]/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+          <p>
+            &copy; 2026 <strong className="text-white">HOTEL SHIVANSH</strong> (Opposite Roadways Bus Depot, Sikar). All rights reserved.
+          </p>
+          <div className="flex items-center gap-6">
+            <span>FSSAI: 12221034000189</span>
+            <span>GSTIN: 08AABCH1234F1Z5</span>
+            <span className="text-[#d4af37]">100% Pure Vegetarian</span>
           </div>
         </div>
+
       </div>
     </footer>
   );

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "rev-1",
+    "name": "Rajendra Prasad Sharma",
+    "avatar": "RS",
+    "rating": 5,
+    "badge": "Family Stay & Dining Guest",
+    "date": "2026-09-18",
+    "comment": "The Shivansh Maharaja Special Royal Thali is unmatched in Sikar! Dal Makhani and Paneer Butter Masala served with pure desi ghee rotis. Superb hospitality and clean AC rooms."
+  },
+  {
+    "id": "rev-2",
+    "name": "Vikram Singh Rathore",
+    "avatar": "VR",
+    "rating": 5,
+    "badge": "In-House Guest (Room 204)",
+    "date": "2026-09-15",
+    "comment": "Ordered food to my room directly from the website. Handi Dum Biryani and hot Paneer Tikka arrived in 20 minutes flat. Zero room delivery charges made it even better!"
+  },
+  {
+    "id": "rev-3",
+    "name": "Meenakshi Shekhawat",
+    "avatar": "MS",
+    "rating": 5,
+    "badge": "Local Resident • Family Celebration",
+    "date": "2026-09-11",
+    "comment": "Booked the AC dining hall for our anniversary dinner. Authentic Rajasthani Dal Baati Churma was fresh, rich, and mouth-watering. 100% pure veg hygiene."
+  },
+  {
+    "id": "rev-4",
+    "name": "Amit Singhal",
+    "avatar": "AS",
+    "rating": 5,
+    "badge": "Frequent Business Traveler",
+    "date": "2026-09-06",
+    "comment": "Best stay and dining hotel near Sikar station. Spacious Deluxe AC room, high-speed WiFi, and 24x7 quick room service. The mobile food ordering experience is top-notch."
+  }
+]
